@@ -1,0 +1,302 @@
+<Template><!-- LOOP_IN1 -->
+
+<PushButton>
+  <TooltipId>loop_in</TooltipId>
+  <NumberStates>2</NumberStates>
+  <State>
+    <Number>0</Number>
+    <Pressed>turntable/loop_in_pr.png</Pressed>
+    <Unpressed>turntable/loop_in_un.png</Unpressed>
+  </State>
+  <State>
+    <Number>1</Number>
+    <Pressed>turntable/loop_in_pr.png</Pressed>
+    <Unpressed>turntable/loop_in_pr.png</Unpressed>
+  </State>
+  <Pos>130,179</Pos>
+  <Connection>
+    <ConfigKey>[Channel1],loop_in</ConfigKey>
+    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+    <ButtonState>LeftButton</ButtonState>
+  </Connection>
+  <Connection>
+    <ConfigKey>[Channel1],loop_enabled</ConfigKey>
+    <ConnectValueFromWidget>false</ConnectValueFromWidget>
+  </Connection>
+
+</PushButton>
+
+<!-- LOOP_IN2 -->
+
+<PushButton>
+  <TooltipId>loop_in</TooltipId>
+  <NumberStates>2</NumberStates>
+  <State>
+    <Number>0</Number>
+    <Pressed>turntable/loop_in_pr.png</Pressed>
+    <Unpressed>turntable/loop_in_un.png</Unpressed>
+  </State>
+  <State>
+    <Number>1</Number>
+    <Pressed>turntable/loop_in_pr.png</Pressed>
+    <Unpressed>turntable/loop_in_pr.png</Unpressed>
+  </State>
+  <Pos>1287,179</Pos>
+  <Connection>
+    <ConfigKey>[Channel2],loop_in</ConfigKey>
+    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+    <ButtonState>LeftButton</ButtonState>
+  </Connection>
+  <Connection>
+    <ConfigKey>[Channel2],loop_enabled</ConfigKey>
+    <ConnectValueFromWidget>false</ConnectValueFromWidget>
+  </Connection>
+</PushButton>
+<!-- LOOP_OUT1 -->
+<PushButton>
+  <TooltipId>loop_out</TooltipId>
+  <NumberStates>2</NumberStates>
+  <State>
+    <Number>0</Number>
+    <Pressed>turntable/loop_out_pr.png</Pressed>
+    <Unpressed>turntable/loop_out_un.png</Unpressed>
+  </State>
+  <State>
+    <Number>1</Number>
+    <Pressed>turntable/loop_out_pr.png</Pressed>
+    <Unpressed>turntable/loop_out_pr.png</Unpressed>
+  </State>
+  <Pos>224,179</Pos>
+  <Connection>
+    <ConfigKey>[Channel1],loop_out</ConfigKey>
+    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+    <ButtonState>LeftButton</ButtonState>
+  </Connection>
+  <Connection>
+    <ConfigKey>[Channel1],loop_enabled</ConfigKey>
+    <ConnectValueFromWidget>false</ConnectValueFromWidget>
+  </Connection>
+</PushButton>
+<!-- LOOP_OUT2 -->
+<PushButton>
+  <TooltipId>loop_out</TooltipId>
+  <NumberStates>2</NumberStates>
+  <State>
+    <Number>0</Number>
+    <Pressed>turntable/loop_out_pr.png</Pressed>
+    <Unpressed>turntable/loop_out_un.png</Unpressed>
+  </State>
+  <State>
+    <Number>1</Number>
+    <Pressed>turntable/loop_out_pr.png</Pressed>
+    <Unpressed>turntable/loop_out_pr.png</Unpressed>
+  </State>
+  <Pos>1380,179</Pos>
+  <Connection>
+    <ConfigKey>[Channel2],loop_out</ConfigKey>
+    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+    <ButtonState>LeftButton</ButtonState>
+  </Connection>
+  <Connection>
+    <ConfigKey>[Channel2],loop_enabled</ConfigKey>
+    <ConnectValueFromWidget>false</ConnectValueFromWidget>
+  </Connection>
+</PushButton>
+
+<!-- RELOOP1 -->
+<PushButton>
+    <TooltipId>reloop_toggle_and_beatloop right click reloop and stop</TooltipId>  
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>turntable/beat_exit.png</Pressed>
+        <Unpressed>turntable/beat_exit.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>turntable/beat_exit.png</Pressed>
+        <Unpressed>turntable/beat_exit.png</Unpressed>
+    </State>
+    <Pos>325,186</Pos>
+    
+ 
+    <Connection>
+        <ConfigKey>[Channel1],reloop_toggle</ConfigKey>
+        <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+        <ButtonState>LeftButton</ButtonState>
+    </Connection>
+    
+
+    <Connection>
+        <ConfigKey>[Channel1],beatloop_activate</ConfigKey>
+        <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Channel1],reloop_andstop</ConfigKey>
+        <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+    
+    <Connection>
+        <ConfigKey>[Channel1],loop_enabled</ConfigKey>
+        <ConnectValueFromWidget>false</ConnectValueFromWidget>
+    </Connection>
+</PushButton>
+
+<!-- RELOOP2  Deck 2) -->
+<PushButton>
+    <TooltipId>reloop_toggle_and_beatloop + right click reloop and stop</TooltipId>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>turntable/beat_exit.png</Pressed>
+        <Unpressed>turntable/beat_exit.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>turntable/beat_exit.png</Pressed>
+        <Unpressed>turntable/beat_exit.png</Unpressed>
+    </State>
+    <Pos>1480,186</Pos>
+    
+   
+    <Connection>
+        <ConfigKey>[Channel2],reloop_toggle</ConfigKey>
+        <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+        <ButtonState>LeftButton</ButtonState>
+    </Connection>
+    
+ 
+    <Connection>
+        <ConfigKey>[Channel2],beatloop_activate</ConfigKey>
+        <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+
+  <Connection>
+        <ConfigKey>[Channel2],reloop_andstop</ConfigKey>
+        <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+    
+    <Connection>
+        <ConfigKey>[Channel2],loop_enabled</ConfigKey>
+        <ConnectValueFromWidget>false</ConnectValueFromWidget>
+    </Connection>
+</PushButton>
+
+
+
+
+<!--  DECK 1 CUE LOOP/CALL -->
+
+	
+<PushButton>
+	<Tooltip>beatlop /2  + right click beatjump 32 backward</Tooltip>
+	<NumberStates>2</NumberStates>						
+	<State>
+		<Number>0</Number>
+		<Pressed>turntable/cue_loop1.png</Pressed>
+		<Unpressed>turntable/cue_loop1.png</Unpressed>
+	</State>
+	<State>
+		<Number>1</Number>
+		<Pressed>turntable/cue_loop1.png</Pressed>
+		<Unpressed>turntable/cue_loop1.png</Unpressed>
+	</State>
+	<Pos>419,187</Pos>
+	<Connection>
+	<ConfigKey>[Channel1],loop_halve</ConfigKey>
+	<EmitOnPress>true</EmitOnPress>
+	<ButtonState>LeftButton</ButtonState>
+	</Connection>
+
+   <Connection>
+        <ConfigKey>[Channel1],beatjump_32_backward</ConfigKey>
+        <EmitOnPress>true</EmitOnPress>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+</PushButton>
+
+<PushButton>
+	<Tooltip>beatlop x2  + right click beatjump 32 forward </Tooltip>
+	<NumberStates>2</NumberStates>
+	<State>
+		<Number>0</Number>
+		<Pressed>turntable/cue_loop2.png</Pressed>
+		<Unpressed>turntable/cue_loop2.png</Unpressed>
+	</State>
+	<State>
+		<Number>1</Number>
+		<Pressed>turntable/cue_loop2.png</Pressed>
+		<Unpressed>turntable/cue_loop2.png</Unpressed>
+	</State>
+		<Pos>496,187</Pos>
+		<Connection>
+		<ConfigKey>[Channel1],loop_double</ConfigKey>
+		<EmitOnPress>true</EmitOnPress>
+		<ButtonState>LeftButton</ButtonState>
+	</Connection>
+ <Connection>
+        <ConfigKey>[Channel1],beatjump_32_forward</ConfigKey>
+        <EmitOnPress>true</EmitOnPress>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+
+</PushButton>
+
+
+<!-- 2 DECK CUE LOOP/CALL -->
+<PushButton>
+	<Tooltip>beatlop /2 right click beatjump 32 backward</Tooltip>
+	<NumberStates>2</NumberStates>						
+	<State>
+		<Number>0</Number>
+		<Pressed>turntable/cue_loop1.png</Pressed>
+		<Unpressed>turntable/cue_loop1.png</Unpressed>
+	</State>
+	<State>
+		<Number>1</Number>
+		<Pressed>turntable/cue_loop1.png</Pressed>
+		<Unpressed>turntable/cue_loop1.png</Unpressed>
+	</State>
+	<Pos>1577,187</Pos>
+	<Connection>
+	<ConfigKey>[Channel2],loop_halve</ConfigKey>
+	<EmitOnPress>true</EmitOnPress>
+	<ButtonState>LeftButton</ButtonState>
+	</Connection>
+ <Connection>
+        <ConfigKey>[Channel2],beatjump_32_backward</ConfigKey>
+        <EmitOnPress>true</EmitOnPress>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+
+</PushButton>
+
+<PushButton>
+	<Tooltip>beatlop x2  + right click beatjump 32 forward</Tooltip>
+	<NumberStates>2</NumberStates>
+	<State>
+		<Number>0</Number>
+		<Pressed>turntable/cue_loop2.png</Pressed>
+		<Unpressed>turntable/cue_loop2.png</Unpressed>
+	</State>
+	<State>
+		<Number>1</Number>
+		<Pressed>turntable/cue_loop2.png</Pressed>
+		<Unpressed>turntable/cue_loop2.png</Unpressed>
+	</State>
+		<Pos>1654,187</Pos>
+		<Connection>
+		<ConfigKey>[Channel2],loop_double</ConfigKey>
+		<EmitOnPress>true</EmitOnPress>
+		<ButtonState>LeftButton</ButtonState>
+	</Connection>
+ <Connection>
+        <ConfigKey>[Channel2],beatjump_32_forward</ConfigKey>
+        <EmitOnPress>true</EmitOnPress>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+</PushButton></Template>

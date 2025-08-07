@@ -1,0 +1,300 @@
+<Template><!-- BPM DISPLAY -->
+<NumberBpm>
+  <TooltipId>visual_bpm</TooltipId>
+  <Channel>1</Channel>
+  <Pos>569,251</Pos>
+  <Size>80f,30f</Size>
+  <Style>
+    font-family: "digital";
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ff9100;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+  </Style>
+  <Connection>
+    <ConfigKey>[Channel1],visual_bpm</ConfigKey>
+  </Connection>
+</NumberBpm>
+<NumberBpm>
+  <TooltipId>visual_bpm</TooltipId>
+  <Channel>2</Channel>
+  <Pos>1724,251</Pos>
+  <Size>80f,30f</Size>
+  <Style>
+    font-family: "digital";
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ff9100;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+  </Style>
+  <Connection>
+    <ConfigKey>[Channel2],visual_bpm</ConfigKey>
+  </Connection>
+</NumberBpm>
+<!-- KEY DISPLAY -->
+<Key>
+  <TooltipId>visual_key</TooltipId>
+  <Channel>1</Channel>
+  <Pos>531,1033</Pos>
+    <Size>34f,46f</Size>
+    <Style>
+    font-family: "arial";
+    font-size: 12px;
+    font-weight: bold;
+    background-color: rgba(7, 7, 7, 0.7);
+    color: #f7f7f7ff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+  </Style>
+   <DisplayCents>false</DisplayCents> <!-- false (default) or true) -->
+  <Connection>
+    <ConfigKey>[Channel1],visual_key</ConfigKey>
+  </Connection>
+</Key>
+
+
+<Key>
+  <TooltipId>visual_key</TooltipId>
+  <Channel>2</Channel>
+  <Pos>1691,1033</Pos>
+    <Size>34f,46f</Size>
+    <Style>
+    font-family: "arial";
+    font-size: 12px;
+    font-weight: bold;
+    background-color: rgba(7, 7, 7, 0.7);
+    color: #f7f7f7ff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+  </Style>
+   <DisplayCents>false</DisplayCents> <!-- false (default) or true) -->
+  <Connection>
+    <ConfigKey>[Channel2],visual_key</ConfigKey>
+  </Connection>
+</Key>
+
+
+
+<!-- TRACK ARTIST DECK1-->
+<TrackProperty>
+  <TooltipId>track_artist</TooltipId>
+  <Size>236f,25f</Size>
+  <Pos>219,1053</Pos>
+  <Property>artist</Property>
+  <Channel>1</Channel>
+  <Elide>right</Elide>
+  <Style>
+    font-family: "digital";
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #A3F1F1;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+  </Style>
+</TrackProperty>
+<TrackProperty>
+  <TooltipId>track_title</TooltipId>
+  <Size>236f,25f</Size>
+  <Pos>219,1034</Pos>
+  <Property>title</Property>
+  <Channel>1</Channel>
+  <Elide>right</Elide>
+  <Style>
+    font-family: "digital";
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #A3F1F1;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+  </Style>
+</TrackProperty>
+<TrackProperty>
+
+<!-- TRACK ARTIST DECK2-->
+
+  <TooltipId>track_title</TooltipId>
+  <Size>236f,25f</Size>
+  <Pos>1375,1053</Pos>
+  <Property>artist</Property>
+  <Channel>2</Channel>
+  <Elide>right</Elide>
+  <Style>
+    font-family: "digital";
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #A3F1F1;;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+  </Style>
+</TrackProperty>
+
+<TrackProperty>
+  <TooltipId>track_artist</TooltipId>
+   <Size>236f,25f</Size>
+  <Pos>1375,1033</Pos>
+  <Property>title</Property>
+  <Channel>2</Channel>
+  <Elide>right</Elide>
+  <Style>
+    font-family: "digital";
+     font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #A3F1F1;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+  </Style>
+</TrackProperty>
+<NumberPos>
+  <Tooltip>Play position/remaining time</Tooltip>
+  <Channel>1</Channel>
+  <Pos>445,1033</Pos>
+  <Size>85f,45f</Size>
+  <Style>
+    font-family: "digital";
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ff0066;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+  </Style>
+  <NumberOfDigits>2</NumberOfDigits>
+  <ShowMilliseconds>false</ShowMilliseconds>
+  <Connection>
+    <ConfigKey>[Channel1],visual_playposition</ConfigKey>
+  </Connection>
+</NumberPos>
+<NumberPos>
+  <Tooltip>Play position/remaining time</Tooltip>
+  <Channel>2</Channel>
+  <Pos>1604,1033</Pos>
+  <Size>85f,45f</Size>
+  <Style>
+    font-family: "digital";
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ff0066;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+  </Style>
+  <NumberOfDigits>2</NumberOfDigits>
+  <ShowMilliseconds>false</ShowMilliseconds>
+  <Connection>
+    <ConfigKey>[Channel2],visual_playposition</ConfigKey>
+  </Connection>
+</NumberPos>
+<!-- recording duration-->
+<RecordingDuration>
+  <Pos>715,153</Pos>
+  <Size>74,30</Size>
+  <Style>
+    font-family: "digital";
+    font-size: 15px;
+    font-weight: normal;
+    background-color: rgba(0, 0, 0,0.8);
+    color: #ff0066;
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+  </Style>
+  <InactiveText></InactiveText>
+ </RecordingDuration>
+
+<NumberRate>
+  <TooltipId>rate_display</TooltipId>
+  <Channel>1</Channel>
+  <Pos>565,723</Pos>
+  <Size>70,35</Size>
+  <Style>
+    font-family: "digital";
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #A3F1F1;
+    text-align: center;
+    padding: 1px;
+    border-radius: 5px;
+  </Style>
+  <Connection>
+  <ConfigKey>[Channel],rate</ConfigKey>
+  </Connection>
+</NumberRate>
+<NumberRate>
+  <TooltipId>rate_display</TooltipId>
+  <Channel>2</Channel>
+  <Pos>1722,723</Pos>
+  <Size>70,35</Size>
+  <Style>
+    font-family: "digital";
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #A3F1F1;
+    text-align: center;
+    padding: 1px;
+    border-radius: 5px;
+  </Style>
+  <Connection>
+  <ConfigKey>[Channel2],rate</ConfigKey>
+  </Connection>
+</NumberRate>
+
+<RateRange>
+              <TooltipId>rate_range_display</TooltipId>
+              <ObjectName>RateRangePrefix</ObjectName>
+              <Channel>1</Channel>
+              
+              <Display></Display>
+              <Size>39f,19f</Size>
+              <Pos>583,1007</Pos>
+  <Style>
+    font-family: "digital";
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #A3F1F1;
+    text-align: center;
+    padding: 1px;
+    border-radius: 5px;
+  </Style>
+            </RateRange>
+<RateRange>
+              <TooltipId>rate_range_display</TooltipId>
+              <ObjectName>RateRangePrefix</ObjectName>
+              <Channel>2</Channel>
+              
+              <Display></Display>
+              <Size>39f,19f</Size>
+              <Pos>1740,1007</Pos>
+  <Style>
+    font-family: "digital";
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #A3F1F1;
+    text-align: center;
+    padding: 1px;
+    border-radius: 5px;
+  </Style>
+            </RateRange>
+
+</Template>

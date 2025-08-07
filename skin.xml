@@ -1,0 +1,1122 @@
+<!DOCTYPE skin>
+<skin>
+<manifest>
+    <title>Basic Controller UI</title>
+    <author>Fauchic</author>
+    <version>0.7</version>
+    <description>Basic 2-channel skin inspired by Pioneer-style controllers, made for easy mixing</description>
+    <language>en</language>
+    <license>Creative Commons Attribution, Share-Alike 3.0 Unported</license>
+        <attributes>
+        <attribute persist="true" config_key="[Skin],pad_mode_2">0</attribute>
+            <attribute persist="true" config_key="[Skin],pad_mode">0</attribute>
+            <attribute persist="true" config_key="[Skin],show_library">0</attribute>
+        </attributes>
+    </manifest>
+ <Style src="skin:style.qss"/>
+
+
+    <WidgetGroup>
+        <Pos>0,0</Pos>
+        <Size>1920f,1080f</Size>
+        <MinimumSize>1024,768</MinimumSize>
+        <Style>QGroupBox { background: url(skin:/Background.png); }</Style>
+    </WidgetGroup>
+    
+ <!-- CROSSFADER -->
+    <SliderComposed>
+  <TooltipId>crossfader</TooltipId>
+<Handle>mixer/slider_h.png</Handle>
+        <Slider>mixer/xfader_bg.png</Slider>
+        <Pos>869,975</Pos>
+  <Horizontal>true</Horizontal>
+  <Connection>
+    <ConfigKey>[Master],crossfader</ConfigKey>
+    <EmitOnDownPress>false</EmitOnDownPress>
+  </Connection>
+</SliderComposed>
+
+<SetVariable name="[Skin],pad_mode">0</SetVariable>
+<!--
+	**********************************************
+	SPINNY VINYLS
+	**********************************************
+	-->	
+<WidgetGroup>
+    <Connection>
+        <ConfigKey>[Skin],show_library</ConfigKey>
+        <Transform>
+            <Not/>
+        </Transform>
+        <BindProperty>visible</BindProperty>
+    </Connection>
+    <Children>
+        <Spinny>
+      <TooltipId>spinny_channel1</TooltipId>
+            <Channel>1</Channel>
+            <Pos>172,310</Pos>
+            <Size>410,410</Size>
+            <PathBackground scalemode="STRETCH">vinyl/background3.png</PathBackground>
+            <PathMask scalemode="STRETCH">vinyl/mask_circle2.png</PathMask>
+            <PathForeground>vinyl/sticker.png</PathForeground>
+            <PathGhost>vinyl/sticker_ghost.png</PathGhost>
+            <ShowCover>true</ShowCover>
+        </Spinny>
+    </Children>
+</WidgetGroup>
+
+<!-- Spinny  Channel 2  -->
+<WidgetGroup>
+    <Connection>
+        <ConfigKey>[Skin],show_library</ConfigKey>
+        <Transform>
+            <Not/>
+        </Transform>
+        <BindProperty>visible</BindProperty>
+    </Connection>
+    <Children>
+        <Spinny>
+            <TooltipId>spinny_channel2</TooltipId>
+            <Channel>2</Channel>
+            <Pos>1330,310</Pos>
+            <Size>410,410</Size>
+            <PathBackground scalemode="STRETCH">vinyl/background4.png</PathBackground>
+            <PathMask scalemode="STRETCH">vinyl/mask_circle4.png</PathMask>
+            <PathForeground>vinyl/sticker2.png</PathForeground>
+            <PathGhost>vinyl/sticker_ghost.png</PathGhost>
+            <ShowCover>true</ShowCover>
+        </Spinny>
+    </Children>
+</WidgetGroup>
+
+
+<Template src="skin:displays.xml"/>
+
+    <SliderComposed>
+        <Tooltip>Channel 1 volume control</Tooltip>
+        <Handle>mixer/slider_v1.png</Handle>
+        <Slider>mixer/slider_v_bg.png</Slider>
+        <Pos>841,760</Pos>
+        <Horizontal>false</Horizontal>
+        <Connection>
+            <ConfigKey>[Channel1],volume</ConfigKey>
+            <EmitOnDownPress>false</EmitOnDownPress>
+        </Connection>
+    </SliderComposed>
+    <SliderComposed>
+        <Tooltip>Channel 2 volume control</Tooltip>
+        <Handle>mixer/slider_v1.png</Handle>
+        <Slider>mixer/slider_v_bg.png</Slider>
+        <Pos>986,760</Pos>
+        <Horizontal>false</Horizontal>
+        <Connection>
+            <ConfigKey>[Channel2],volume</ConfigKey>
+            <EmitOnDownPress>false</EmitOnDownPress>
+        </Connection>
+    </SliderComposed>
+
+
+  
+
+    
+
+    <SliderComposed>
+        <Tooltip>rate</Tooltip>
+        <Handle>turntable/slider_v.png</Handle>
+        <Slider>turntable/slider_hole_bg.png</Slider>
+        <Pos>567,757</Pos>
+        <Horizontal>false</Horizontal>
+        <Connection>
+            <ConfigKey>[Channel1],rate</ConfigKey>
+            <EmitOnDownPress>false</EmitOnDownPress>
+        </Connection>
+    </SliderComposed>
+    <SliderComposed>
+        <Tooltip>rate</Tooltip>
+        <Handle>turntable/slider_v.png</Handle>
+        <Slider>turntable/slider_hole_bg2.png</Slider>
+        <Pos>1723,757</Pos>
+        <Horizontal>false</Horizontal>
+        <Connection>
+            <ConfigKey>[Channel2],rate</ConfigKey>
+            <EmitOnDownPress>false</EmitOnDownPress>
+        </Connection>
+    </SliderComposed>
+
+
+
+
+<!-- PLAY1 -->
+<PushButton>
+    <Tooltip>Left Click: Pause/play, Right Click: Set cue point</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>turntable/play_pr.png</Pressed>
+       
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>turntable/play_pr.png</Pressed>
+        <Unpressed>turntable/play_pr.png</Unpressed>
+    </State>
+    <Pos>112,933</Pos>
+    <Connection>
+        <ConfigKey>[Channel1],play</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>LeftButton</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Channel1],cue_set</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Channel1],play_indicator</ConfigKey>
+    </Connection>
+</PushButton>
+
+
+<!-- PLAY2-->
+<PushButton>
+    <Tooltip>Left Click: Pause/play, Right Click: Set cue point</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>turntable/play_pr.png</Pressed>
+        
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>turntable/play_pr.png</Pressed>
+        <Unpressed>turntable/play_pr.png</Unpressed>
+    </State>
+    <Pos>1269,933</Pos>
+    <Connection>
+        <ConfigKey>[Channel2],play</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>LeftButton</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Channel2],cue_set</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Channel2],play_indicator</ConfigKey>
+    </Connection>
+</PushButton>
+<!-- CUE1 -->
+   <PushButton>
+  <TooltipId>cue_default_cue_gotoandstop</TooltipId>
+  <NumberStates>2</NumberStates>
+  <State>
+    <Number>0</Number>
+    <Pressed>turntable/cue_pr.png</Pressed>
+   
+  </State>
+  <State>
+    <Number>1</Number>
+    <Pressed>turntable/cue_pr.png</Pressed>
+    <Unpressed>turntable/cue_pr.png</Unpressed>
+  </State>
+  <Pos>113,829</Pos>
+  <Connection>
+    <ConfigKey>[Channel1],cue_default</ConfigKey>
+    <EmitOnDownPress>true</EmitOnDownPress>
+    <ButtonState>LeftButton</ButtonState>
+  </Connection>
+  <Connection>
+    <ConfigKey>[Channel1],cue_gotoandstop</ConfigKey>
+    <EmitOnDownPress>true</EmitOnDownPress>
+    <ButtonState>RightButton</ButtonState>
+  </Connection>
+  <Connection>
+    <ConfigKey>[Channel1],cue_indicator</ConfigKey>
+  </Connection>
+</PushButton>
+
+<!-- CUE2 -->
+<PushButton>
+  <TooltipId>cue_default_cue_gotoandstop</TooltipId>
+  <NumberStates>2</NumberStates>
+  <State>
+    <Number>0</Number>
+    <Pressed>turntable/cue_pr.png</Pressed>
+  
+  </State>
+  <State>
+    <Number>1</Number>
+    <Pressed>turntable/cue_pr.png</Pressed>
+    <Unpressed>turntable/cue_pr.png</Unpressed>
+  </State>
+  <Pos>1270,829</Pos>
+  <Connection>
+    <ConfigKey>[Channel2],cue_default</ConfigKey>
+    <EmitOnDownPress>true</EmitOnDownPress>
+    <ButtonState>LeftButton</ButtonState>
+  </Connection>
+  <Connection>
+    <ConfigKey>[Channel2],cue_gotoandstop</ConfigKey>
+    <EmitOnDownPress>true</EmitOnDownPress>
+    <ButtonState>RightButton</ButtonState>
+  </Connection>
+  <Connection>
+    <ConfigKey>[Channel2],cue_indicator</ConfigKey>
+  </Connection>
+</PushButton>
+
+<!--
+	**********************************************
+	LOOP SECTION
+	**********************************************
+	-->
+
+
+<Template src="skin:loop_section.xml"/>
+<!--
+	**********************************************
+	Knob- Microphone Volume
+	**********************************************
+	-->
+	
+	<KnobComposed>
+		<Tooltip>Adjusts the microphone volume.&#10;Right-click: Reset to default value&#10;</Tooltip>
+		<Size>46f,46f</Size>
+		<Knob>mixer/knob_grey.png</Knob>
+		<BackPath>mixer/knob_grey.png</BackPath>
+		<MinAngle>0</MinAngle>
+		<MaxAngle>305</MaxAngle>
+		<KnobCenterYOffset>0</KnobCenterYOffset>
+		<Pos>725,399</Pos>
+		<Connection>
+		<ConfigKey>[Microphone],volume</ConfigKey>
+		</Connection>
+	</KnobComposed>
+
+	<!--	
+	
+	
+	Section: RotaryFader 
+	
+	-->
+	
+	<!--
+	**********************************************
+	RotaryFader- Master volume & balance
+	**********************************************
+	-->
+
+	<KnobComposed>
+		<Tooltip>Master volume control</Tooltip>
+		<Size>60f,60f</Size>
+		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
+		<BackPath>mixer/knob_grey.png</BackPath>
+		<MinAngle>0</MinAngle>
+		<MaxAngle>290</MaxAngle>
+		<KnobCenterYOffset>0</KnobCenterYOffset>
+		<Pos>1134,212</Pos>
+		<Connection>
+			<ConfigKey>[Master],volume</ConfigKey>
+		</Connection>
+	</KnobComposed>
+	
+			
+	<!--
+	**********************************************
+	RotaryFader- Headphone volume and mix
+	**********************************************
+	-->
+	
+	<KnobComposed>
+		<Tooltip>Headphone volume control</Tooltip>
+		<Size>60f,60f</Size>
+		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
+		<BackPath>mixer/knob_grey.png</BackPath>
+		<MinAngle>5</MinAngle>
+		<MaxAngle>310</MaxAngle>
+		<KnobCenterYOffset>0</KnobCenterYOffset>
+		<Pos>718,780</Pos>
+		<Connection>
+			<ConfigKey>[Master],headVolume</ConfigKey>
+		</Connection>
+	</KnobComposed>	
+	<KnobComposed>
+		<Tooltip>Headphone mix control</Tooltip>
+		<Size>60f,60f</Size>
+		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
+		<BackPath>mixer/knob_grey.png</BackPath>
+		<MinAngle>5</MinAngle>
+		<MaxAngle>310</MaxAngle>
+		<KnobCenterYOffset>0</KnobCenterYOffset>
+		<Pos>718,685</Pos>
+		<Connection>
+			<ConfigKey>[Master],headMix</ConfigKey>
+		</Connection>
+	</KnobComposed>
+	
+	<!--
+	**********************************************
+	RotaryFader- Channel filter and gain
+	**********************************************
+	-->
+	<!-- CHANNEl1-->
+	<KnobComposed>
+		<Tooltip>Gain control</Tooltip>
+		<Size>34f,34f</Size>
+		<Knob>mixer/trim_knob<Variable name="color"/>.png</Knob>
+		<BackPath>mixer/trim_knob.png</BackPath>
+		<MinAngle>60</MinAngle>
+		<MaxAngle>350</MaxAngle>
+		<KnobCenterYOffset>0</KnobCenterYOffset>
+		<Pos>866,224</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],pregain</ConfigKey>
+		</Connection>
+	</KnobComposed>
+	<KnobComposed>
+		<Tooltip>Treble filter control</Tooltip>
+		<Size>60f,60f</Size>
+		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
+		<BackPath>mixer/knob_grey.png</BackPath>
+		<MinAngle>0</MinAngle>
+		<MaxAngle>305</MaxAngle>
+		<KnobCenterYOffset>0</KnobCenterYOffset>
+		<Pos>853,302</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],filterHigh</ConfigKey>
+		</Connection>
+	</KnobComposed>
+	<KnobComposed>
+		<Tooltip>Mid filter control</Tooltip>
+		<Size>60f,60f</Size>
+		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
+		<BackPath>mixer/knob_grey.png</BackPath>
+		<MinAngle>0</MinAngle>
+		<MaxAngle>305</MaxAngle>
+		<KnobCenterYOffset>0</KnobCenterYOffset>
+		<Pos>853,392</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],filterMid</ConfigKey>
+		</Connection>
+	</KnobComposed>
+	<KnobComposed>
+		<Tooltip>Bass filter control</Tooltip>
+		<Size>60f,60f</Size>
+		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
+		<BackPath>mixer/knob_grey.png</BackPath>
+		<MinAngle>0</MinAngle>
+		<MaxAngle>305</MaxAngle>
+		<KnobCenterYOffset>0</KnobCenterYOffset>
+		<Pos>853,483</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],filterLow</ConfigKey>
+		</Connection>
+	</KnobComposed>
+		
+<!-- CHANNEl2-->
+
+
+	<KnobComposed>
+		<Tooltip>Gain control</Tooltip>
+		<Size>34f,34f</Size>
+		<Knob>mixer/trim_knob<Variable name="color"/>.png</Knob>
+		<BackPath>mixer/trim_knob.png</BackPath>
+		<MinAngle>60</MinAngle>
+		<MaxAngle>350</MaxAngle>
+		<KnobCenterYOffset>0</KnobCenterYOffset>
+		<Pos>1014,224</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],pregain</ConfigKey>
+		</Connection>
+	</KnobComposed>
+	<KnobComposed>
+		<Tooltip>Treble filter control</Tooltip>
+		<Size>60f,60f</Size>
+		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
+		<BackPath>mixer/knob_grey.png</BackPath>
+		<MinAngle>0</MinAngle>
+		<MaxAngle>305</MaxAngle>
+		<KnobCenterYOffset>0</KnobCenterYOffset>
+		<Pos>999,302</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],filterHigh</ConfigKey>
+		</Connection>
+	</KnobComposed>
+	<KnobComposed>
+		<Tooltip>Mid filter control</Tooltip>
+		<Size>60f,60f</Size>
+		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
+		<BackPath>mixer/knob_grey.png</BackPath>
+		<MinAngle>0</MinAngle>
+		<MaxAngle>305</MaxAngle>
+		<KnobCenterYOffset>0</KnobCenterYOffset>
+		<Pos>999,392</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],filterMid</ConfigKey>
+		</Connection>
+	</KnobComposed>
+	<KnobComposed>
+		<Tooltip>Bass filter control</Tooltip>
+		<Size>60f,60f</Size>
+		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
+		<BackPath>mixer/knob_grey.png</BackPath>
+		<MinAngle>0</MinAngle>
+		<MaxAngle>305</MaxAngle>
+		<KnobCenterYOffset>0</KnobCenterYOffset>
+		<Pos>999,482</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],filterLow</ConfigKey>
+		</Connection>
+	</KnobComposed>
+
+<!--
+	**********************************************
+	FX PANEL
+	**********************************************
+	-->
+<!-- Quick Effect  -->
+<!-- Channel 1 -->
+
+<KnobComposed>
+    <Tooltip>QuickEffect: Filter</Tooltip>
+    <Size>45f,45f</Size>
+    <Knob>mixer/FILTER_knob.png</Knob>
+    <BackPath>mixer/FILTER_knob.png</BackPath>
+    <MinAngle>-150</MinAngle>
+    <MaxAngle>150</MaxAngle>
+    <KnobCenterYOffset>0</KnobCenterYOffset>
+    <Pos>860,578</Pos>
+    <Connection>
+        <ConfigKey>[QuickEffectRack1_[Channel1]],super1</ConfigKey>
+    </Connection>
+</KnobComposed>
+<!-- Channel 2 -->
+<KnobComposed>
+    <Tooltip>QuickEffect: Filter</Tooltip>
+    <Size>45f,45f</Size>
+    <Knob>mixer/FILTER_knob.png</Knob>
+    <BackPath>mixer/FILTER_knob.png</BackPath>
+    <MinAngle>-150</MinAngle>
+    <MaxAngle>150</MaxAngle>
+    <KnobCenterYOffset>0</KnobCenterYOffset>
+    <Pos>1008,578</Pos>
+    <Connection>
+        <ConfigKey>[QuickEffectRack1_[Channel2]],super1</ConfigKey>
+    </Connection>
+</KnobComposed>
+
+
+<!--  beatFxLevelDepth  -->
+<KnobComposed>
+    <Tooltip>Beat Effect: Mix (Dry/Wet)</Tooltip>
+    <Size>46f,46f</Size>
+    <Knob>mixer/FILTER_knob.png</Knob>
+    <BackPath>mixer/FILTER_knob.png</BackPath>
+    <MinAngle>-150</MinAngle>
+    <MaxAngle>150</MaxAngle>
+    <KnobCenterYOffset>0</KnobCenterYOffset>
+    <Pos>1143,786</Pos> 
+    <Connection>
+        <ConfigKey>[EffectRack1_EffectUnit1],mix</ConfigKey>
+    </Connection>
+</KnobComposed>
+<!--  METAKNOB  -->
+ <KnobComposed>
+    <Tooltip>Eeffect 1 metaknob</Tooltip>
+    <Size>34f,34f</Size>
+    <Knob>mixer/meta_knob.png</Knob>
+    <BackPath>mixer/meta_knob.png</BackPath>
+    <MinAngle>-150</MinAngle>
+    <MaxAngle>150</MaxAngle>
+    <KnobCenterYOffset>0</KnobCenterYOffset>
+    <Pos>1152,1005</Pos> 
+    <Connection>
+        <ConfigKey>[EffectRack1_EffectUnit1_Effect1],meta</ConfigKey>
+    </Connection>
+</KnobComposed>
+
+<!--  FX ON/OFF -->
+<PushButton>
+    <Tooltip>Toggle Effect On/Off</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+ <Pressed>mixer/FX_ON.png</Pressed>
+    <Unpressed>mixer/FX_OFF.png</Unpressed>
+       
+    </State>
+    <State>
+        <Number>1</Number>
+      <Pressed>mixer/FX_ON.png</Pressed>
+    <Unpressed>mixer/FX_ON.png</Unpressed>
+    </State>
+    <Pos>1142,890</Pos> 
+    <Connection>
+         <ConfigKey>[EffectRack1_EffectUnit1_Effect1],enabled</ConfigKey>
+        <ButtonState>Toggle</ButtonState>
+    </Connection>
+</PushButton>
+<!--  FX CH1 ON/OFF -->
+<PushButton>
+    <Tooltip>Toggle Effect on Channel 1</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+       <Pressed>mixer/FXCH_ON.png</Pressed>
+    <Unpressed>mixer/FXCH_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+           <Pressed>mixer/FXCH_ON.png</Pressed>
+    <Unpressed>mixer/FXCH_ON.png</Unpressed>
+    </State>
+    <Pos>1101,500</Pos> 
+    <Connection>
+        <ConfigKey>[EffectRack1_EffectUnit1],group_[Channel1]_enable</ConfigKey>
+        <ButtonState>Toggle</ButtonState>
+    </Connection>
+</PushButton>
+
+<!--  FX CH2 ON/OFF -->
+<PushButton>
+    <Tooltip>Toggle Effect on Channel 2</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+           <Pressed>mixer/FXCH_ON.png</Pressed>
+    <Unpressed>mixer/FXCH_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+           <Pressed>mixer/FXCH_ON.png</Pressed>
+    <Unpressed>mixer/FXCH_ON.png</Unpressed>
+    </State>
+    <Pos>1174,500</Pos> <!-- Под beatFxChannel1 -->
+    <Connection>
+        <ConfigKey>[EffectRack1_EffectUnit1],group_[Channel2]_enable</ConfigKey>
+        <ButtonState>Toggle</ButtonState>
+    </Connection>
+</PushButton>
+
+
+<!--  beatFxLeft  -->
+<PushButton>
+    <Tooltip>Previous Effect</Tooltip>
+    <NumberStates>1</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>mixer/PREV.png</Pressed>
+    <Unpressed>mixer/PREV.png</Unpressed>
+    </State>
+    <Pos>1120,682</Pos> <!-- Под энкодером -->
+    <Connection>
+        <ConfigKey>[EffectRack1_EffectUnit1_Effect1],prev_effect</ConfigKey>
+        <ButtonState>Press</ButtonState>
+    </Connection>
+</PushButton>
+
+<!-- beatFxRight  -->
+<PushButton>
+    <Tooltip>Next Effect</Tooltip>
+    <NumberStates>1</NumberStates>
+    <State>
+        <Number>0</Number>
+                <Pressed>mixer/NEXT.png</Pressed>
+    <Unpressed>mixer/NEXT.png</Unpressed>
+    </State>
+    <Pos>1173,682</Pos> <!-- Рядом с beatFxLeft -->
+    <Connection>
+        <ConfigKey>[EffectRack1_EffectUnit1_Effect1],next_effect</ConfigKey>
+        <ButtonState>Press</ButtonState>
+    </Connection>
+</PushButton>
+<EffectSelector>
+    <ObjectName>EffectSelector</ObjectName>
+    <EffectRack>1</EffectRack>
+    <EffectUnit>1</EffectUnit>
+    <Effect>1</Effect>
+    <Elide>right</Elide>
+    <Pos>1108,622</Pos>
+    <Size>100,20</Size>
+    <Tooltip>Current Effect Name</Tooltip>
+  <Style>
+    font-family: "digital";
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #A3F1F1;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+  </Style>
+</EffectSelector>
+
+<!--
+	**********************************************
+	PFL
+	**********************************************
+	-->
+
+<PushButton>
+  <TooltipId>pfl</TooltipId>
+  <NumberStates>2</NumberStates>
+  <State>
+    <Number>0</Number>
+    <Pressed>mixer/cue_ind.png</Pressed>
+    <Unpressed>mixer/cue_ind_un.png</Unpressed>
+  </State>
+  <State>
+    <Number>1</Number>
+    <Pressed>mixer/cue_ind.png</Pressed>
+    <Unpressed>mixer/cue_ind.png</Unpressed>
+  </State>
+  <Pos>855,681</Pos>
+  <Connection>
+    <ConfigKey>[Channel1],pfl</ConfigKey>
+  </Connection>
+</PushButton>
+<PushButton>
+  <TooltipId>pfl</TooltipId>
+  <NumberStates>2</NumberStates>
+  <State>
+    <Number>0</Number>
+     <Pressed>mixer/cue_ind.png</Pressed>
+    <Unpressed>mixer/cue_ind_un.png</Unpressed>
+  </State>
+  <State>
+    <Number>1</Number>
+  <Pressed>mixer/cue_ind.png</Pressed>
+    <Unpressed>mixer/cue_ind.png</Unpressed>
+  </State>
+  <Pos>1002,681</Pos>
+  <Connection>
+    <ConfigKey>[Channel2],pfl</ConfigKey>
+  </Connection>
+</PushButton>
+
+
+
+
+
+
+
+<!--
+	**********************************************
+	SYNC
+	**********************************************
+	-->
+<PushButton>
+  <TooltipId>sync_enabled</TooltipId>
+  <NumberStates>2</NumberStates>
+  <State>
+    <Number>0</Number>
+    <Pressed>turntable/beat_sync_pr.png</Pressed>
+    <Unpressed>turntable/beat_sync_un.png</Unpressed>
+  </State>
+  <State>
+    <Number>1</Number>
+    <Pressed>turntable/beat_sync_pr1.png</Pressed>
+    <Unpressed>turntable/beat_sync_pr1.png</Unpressed>
+  </State>
+  <Pos>581,183</Pos>
+  <Connection>
+    <ConfigKey>[Channel1],sync_enabled</ConfigKey>
+    <ButtonState>LeftButton</ButtonState>
+    <ConnectValueToWidget>true</ConnectValueToWidget>
+  </Connection>
+  <Connection>
+    <ConfigKey>[Channel1],beatsync</ConfigKey>
+    <ButtonState>RightButton</ButtonState>
+  </Connection>
+</PushButton>
+
+<PushButton>
+  <TooltipId>sync_enabled</TooltipId>
+  <NumberStates>2</NumberStates>
+  <State>
+    <Number>0</Number>
+    <Pressed>turntable/beat_sync_pr.png</Pressed>
+    <Unpressed>turntable/beat_sync_un.png</Unpressed>
+  </State>
+  <State>
+    <Number>1</Number>
+    <Pressed>turntable/beat_sync_pr1.png</Pressed>
+    <Unpressed>turntable/beat_sync_pr1.png</Unpressed>
+  </State>
+  <Pos>1738,180</Pos>
+  <Connection>
+    <ConfigKey>[Channel2],sync_enabled</ConfigKey>
+    <ButtonState>LeftButton</ButtonState>
+    <ConnectValueToWidget>true</ConnectValueToWidget>
+  </Connection>
+  <Connection>
+    <ConfigKey>[Channel2],beatsync</ConfigKey>
+    <ButtonState>RightButton</ButtonState>
+  </Connection>
+</PushButton>
+
+<Template src="skin:overview_section.xml"/>
+
+
+
+
+<!--  WAVEFORM-->
+<WidgetGroup>
+  <Layout>vertical</Layout>
+  <Children>
+    <Template src="skin:waveform_section.xml"/>
+  </Children>
+</WidgetGroup>
+
+
+
+   
+<!--
+	**********************************************
+SIDE BUTTONS
+	**********************************************
+	-->
+ 
+  <Template src="skin:sidebuttons.xml"/>
+  
+<!--
+	**********************************************
+VU METERS 
+	**********************************************
+	-->
+
+
+<WidgetGroup>
+    <Connection>
+        <ConfigKey>[Skin],show_library</ConfigKey>
+        <Transform>
+            <Not/>
+        </Transform>
+        <BindProperty>visible</BindProperty>
+    </Connection>
+        <Pos>935,348</Pos>
+        <Layout>horizontal</Layout>
+        <Children>
+            <VuMeter>
+                <Tooltip>Channel volume display</Tooltip>
+                <PathVu>mixer/vu_pr.png</PathVu>
+                <PathBack>mixer/vu_un.png</PathBack>
+                <Horizontal>false</Horizontal>
+                <PeakHoldSize>4</PeakHoldSize>
+                <PeakHoldTime>500</PeakHoldTime>
+                <PeakFallTime>10</PeakFallTime>
+                <PeakFallStep>2</PeakFallStep>
+                <Connection>
+                    <ConfigKey>[Channel1],vu_meter</ConfigKey>
+                </Connection>
+            </VuMeter>
+        </Children>
+    </WidgetGroup>
+    <WidgetGroup>
+<Connection>
+        <ConfigKey>[Skin],show_library</ConfigKey>
+        <Transform>
+            <Not/>
+        </Transform>
+        <BindProperty>visible</BindProperty>
+    </Connection>
+        <Pos>969,348</Pos>
+        <Layout>horizontal</Layout>
+        <Children>
+            <VuMeter>
+                <Tooltip>Channel volume display</Tooltip>
+                <PathVu>mixer/vu_pr.png</PathVu>
+                <PathBack>mixer/vu_un.png</PathBack>
+                <Horizontal>false</Horizontal>
+                <PeakHoldSize>4</PeakHoldSize>
+                <PeakHoldTime>500</PeakHoldTime>
+                <PeakFallTime>10</PeakFallTime>
+                <PeakFallStep>2</PeakFallStep>
+                <Connection>
+                    <ConfigKey>[Channel2],vu_meter</ConfigKey>
+                </Connection>
+            </VuMeter>
+        </Children>
+    </WidgetGroup>
+
+
+<!--
+	**********************************************
+	PAD MODE SWITCHERS DECK 1
+	**********************************************
+	-->
+<!-- Hot Cue Mode Button -->
+<PushButton>
+    <Tooltip>Enable Hot Cue Mode (Deck 1)</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>pad/HOT_CUE_MODE_OFF.png</Pressed>
+        <Unpressed>pad/HOT_CUE_MODE_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>pad/HOT_CUE_MODE_ON.png</Pressed>
+        <Unpressed>pad/HOT_CUE_MODE_ON.png</Unpressed>
+    </State>
+    <Pos>222,813</Pos>
+    <Size>80,40</Size>
+    <Connection>
+        <ConfigKey>[Skin],pad_mode</ConfigKey>
+        <Transform><Set>0</Set></Transform>
+        <ButtonState>Press</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Skin],pad_mode</ConfigKey>
+        <Transform><IsEqual>0</IsEqual></Transform>
+        <ConnectValueToWidget>true</ConnectValueToWidget>
+    </Connection>
+</PushButton>
+<!-- Beat Jump Mode Button -->
+<PushButton>
+    <Tooltip>Enable Beat Jump Mode (Deck 1)</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>pad/BEAT_JUMP_MODE_OFF.png</Pressed>
+        <Unpressed>pad/BEAT_JUMP_MODE_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>pad/BEAT_JUMP_MODE_ON.png</Pressed>
+        <Unpressed>pad/BEAT_JUMP_MODE_ON.png</Unpressed>
+    </State>
+    <Pos>387,814</Pos>
+    <Size>80,40</Size>
+    <Connection>
+        <ConfigKey>[Skin],pad_mode</ConfigKey>
+        <Transform><Set>1</Set></Transform>
+        <ButtonState>Press</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Skin],pad_mode</ConfigKey>
+        <Transform><IsEqual>1</IsEqual></Transform>
+        <ConnectValueToWidget>true</ConnectValueToWidget>
+    </Connection>
+</PushButton>
+<!-- Sampler Mode Button -->
+<PushButton>
+    <Tooltip>Enable Sampler Mode (Deck 1)</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>pad/SAMPLER_MODE_OFF.png</Pressed>
+        <Unpressed>pad/SAMPLER_MODE_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>pad/SAMPLER_MODE_ON.png</Pressed>
+        <Unpressed>pad/SAMPLER_MODE_ON.png</Unpressed>
+    </State>
+    <Pos>467,814</Pos>
+    <Size>80,40</Size>
+    <Connection>
+        <ConfigKey>[Skin],pad_mode</ConfigKey>
+        <Transform><Set>2</Set></Transform>
+        <ButtonState>Press</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Skin],pad_mode</ConfigKey>
+        <Transform><IsEqual>2</IsEqual></Transform>
+        <ConnectValueToWidget>true</ConnectValueToWidget>
+    </Connection>
+</PushButton>
+
+
+
+<WidgetStack currentpage="[Skin],pad_mode">
+    <Pos>215,873</Pos>
+    <Size>323f,159f</Size>
+    <Layout>grid</Layout>
+    <Children>
+        <Template src="skin:hot_cue_pads1.xml"/>
+        <Template src="skin:beat_jump1.xml"/>
+        <Template src="skin:sampler_pad1.xml"/>
+    </Children>
+</WidgetStack>
+
+<!--
+	**********************************************
+	PAD MODE SWITCHERS DECK 2
+	**********************************************
+	-->
+
+ <!-- Hot Cue Mode Button (Deck 2) -->
+<PushButton>
+    <Tooltip>Enable Hot Cue Mode (Deck 2)</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>pad/HOT_CUE_MODE_OFF.png</Pressed>
+        <Unpressed>pad/HOT_CUE_MODE_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>pad/HOT_CUE_MODE_ON.png</Pressed>
+        <Unpressed>pad/HOT_CUE_MODE_ON.png</Unpressed>
+    </State>
+    <Pos>1378,813</Pos>
+    <Size>80,40</Size>
+    <Connection>
+        <ConfigKey>[Skin],pad_mode_2</ConfigKey>
+        <Transform><Set>0</Set></Transform>
+        <ButtonState>Press</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Skin],pad_mode_2</ConfigKey>
+        <Transform><IsEqual>0</IsEqual></Transform>
+        <ConnectValueToWidget>true</ConnectValueToWidget>
+    </Connection>
+</PushButton>
+<!-- Beat Jump Mode Button (Deck 2) -->
+<PushButton>
+    <Tooltip>Enable Beat Jump Mode (Deck 2)</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>pad/BEAT_JUMP_MODE_OFF.png</Pressed>
+        <Unpressed>pad/BEAT_JUMP_MODE_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>pad/BEAT_JUMP_MODE_ON.png</Pressed>
+        <Unpressed>pad/BEAT_JUMP_MODE_ON.png</Unpressed>
+    </State>
+    <Pos>1545,814</Pos>
+    <Size>80,40</Size>
+    <Connection>
+        <ConfigKey>[Skin],pad_mode_2</ConfigKey>
+        <Transform><Set>1</Set></Transform>
+        <ButtonState>Press</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Skin],pad_mode_2</ConfigKey>
+        <Transform><IsEqual>1</IsEqual></Transform>
+        <ConnectValueToWidget>true</ConnectValueToWidget>
+    </Connection>
+</PushButton>
+<!-- Sampler Mode Button (Deck 2) -->
+<PushButton>
+    <Tooltip>Enable Sampler Mode (Deck 2)</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>pad/SAMPLER_MODE_OFF.png</Pressed>
+        <Unpressed>pad/SAMPLER_MODE_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>pad/SAMPLER_MODE_ON.png</Pressed>
+        <Unpressed>pad/SAMPLER_MODE_ON.png</Unpressed>
+    </State>
+    <Pos>1624,814</Pos>
+    <Size>80,40</Size>
+    <Connection>
+        <ConfigKey>[Skin],pad_mode_2</ConfigKey>
+        <Transform><Set>2</Set></Transform>
+        <ButtonState>Press</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Skin],pad_mode_2</ConfigKey>
+        <Transform><IsEqual>2</IsEqual></Transform>
+        <ConnectValueToWidget>true</ConnectValueToWidget>
+    </Connection>
+</PushButton>
+ 
+
+ <!-- pad_mode -->
+<WidgetStack currentpage="[Skin],pad_mode_2">
+    <Pos>1373,873</Pos>
+    <Size>323f,159f</Size>
+    <Layout>grid</Layout>
+    <Children>
+        <Template src="skin:hot_cue_pads2.xml"/>
+        <Template src="skin:beat_jump2.xml"/>
+        <Template src="skin:sampler_pad1.xml"/>
+    </Children>
+</WidgetStack>
+ <!-- LOAD DECK -->
+<PushButton>
+        <Tooltip>load  DECK1</Tooltip>
+        <NumberStates>1</NumberStates>
+             
+        <Pos>809,152</Pos>
+<Size>57,28</Size>
+
+        <Connection>
+             <ConfigKey>[Channel1],LoadSelectedTrack</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+<PushButton>
+        <Tooltip>load</Tooltip>
+        <NumberStates>1</NumberStates>
+             
+        <Pos>1047,152</Pos>
+<Size>57,28</Size>
+        <Connection>
+             <ConfigKey>[Channel2],LoadSelectedTrack</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>  
+    <SliderComposed>
+  <TooltipId>crossfader</TooltipId>
+<Handle>mixer/slider_h.png</Handle>
+        <Slider>mixer/xfader_bg.png</Slider>
+        <Pos>869,975</Pos>
+  <Horizontal>true</Horizontal>
+  <Connection>
+    <ConfigKey>[Master],crossfader</ConfigKey>
+    <EmitOnDownPress>false</EmitOnDownPress>
+  </Connection>
+</SliderComposed>
+<WidgetGroup>
+        <ObjectName>LibraryWrapper</ObjectName>
+        <Pos>72,311</Pos>
+        <SizePolicy>f,f</SizePolicy>
+        <Layout>vertical</Layout>
+
+        <Connection>
+            <ConfigKey>[Skin],show_library</ConfigKey>
+            <BindProperty>visible</BindProperty>
+        </Connection>
+        <Children>
+            <WidgetGroup>
+                <ObjectName>LibraryContainer</ObjectName>
+                <Size>1767f,577f</Size>
+                <Layout>horizontal</Layout>
+                <Children>
+                    <Splitter>
+                        <Size>me,me</Size>
+                        <SplitSizes>1,6</SplitSizes>
+                        <Collapsible>1,0</Collapsible>
+                        <SplitSizesConfigKey>[Skin],librarySidebar_splitsize</SplitSizesConfigKey>
+                        <Children>
+                            <WidgetGroup>
+                                <SizePolicy>i,min</SizePolicy>
+                                <Layout>vertical</Layout>
+                                <Children>
+                                    <SearchBox></SearchBox>
+                                    <WidgetGroup><Size>,5f</Size></WidgetGroup>
+                                    <LibrarySidebar></LibrarySidebar>
+                                </Children>
+                            </WidgetGroup>
+                            <Library>
+                                <ShowButtonText>false</ShowButtonText>
+                                <TrackTableBackgroundColorOpacity>0.250</TrackTableBackgroundColorOpacity>
+                            </Library>
+                        </Children>
+                    </Splitter>
+                </Children>
+            </WidgetGroup>
+        </Children>
+    </WidgetGroup>
+</skin>

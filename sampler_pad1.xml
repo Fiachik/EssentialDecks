@@ -1,0 +1,142 @@
+<Template>
+<WidgetGroup trigger="[Skin],pad_mode,2">
+    <Children>
+        <!-- Sampler 1 -->
+        <PushButton>
+            <Tooltip>Play Sampler 1</Tooltip>
+            <NumberStates>1</NumberStates>
+            <LeftClickIsPushButton>true</LeftClickIsPushButton>
+            <State>
+                <Number>0</Number>
+                <Pressed>pad/hot_cue_on.png</Pressed>
+                <Unpressed>pad/hot_cue_off.png</Unpressed>
+            </State>
+           
+            <Pos>8,5</Pos>
+            <Connection>
+                <ConfigKey>[Sampler1],play</ConfigKey>
+                <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+            </Connection>
+        </PushButton>
+        <!-- Sampler 2 -->
+        <PushButton>
+            <Tooltip>Play Sampler 2</Tooltip>
+            <NumberStates>1</NumberStates>
+            <LeftClickIsPushButton>true</LeftClickIsPushButton>
+            <State>
+                <Number>0</Number>
+                <Pressed>pad/hot_cue_on.png</Pressed>
+                <Unpressed>pad/hot_cue_off.png</Unpressed>
+            </State>
+            
+            <Pos>90,5</Pos>
+            <Connection>
+                <ConfigKey>[Sampler2],play</ConfigKey>
+                <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+            </Connection>
+        </PushButton>
+        <!-- Sampler 3 -->
+        <PushButton>
+            <Tooltip>Play Sampler 3</Tooltip>
+            <NumberStates>1</NumberStates>
+            <LeftClickIsPushButton>true</LeftClickIsPushButton>
+            <State>
+                <Number>0</Number>
+                <Pressed>pad/hot_cue_on.png</Pressed>
+                <Unpressed>pad/hot_cue_off.png</Unpressed>
+            </State>
+           
+            <Pos>170,5</Pos>
+            <Connection>
+                <ConfigKey>[Sampler3],play</ConfigKey>
+                <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+            </Connection>
+        </PushButton>
+        <!-- Sampler 4 -->
+        <PushButton>
+            <Tooltip>Play Sampler 4</Tooltip>
+            <NumberStates>1</NumberStates>
+            <LeftClickIsPushButton>true</LeftClickIsPushButton>
+            <State>
+                <Number>0</Number>
+                <Pressed>pad/hot_cue_on.png</Pressed>
+                <Unpressed>pad/hot_cue_off.png</Unpressed>
+            </State>
+           
+            <Pos>252,5</Pos>
+            <Connection>
+                <ConfigKey>[Sampler4],play</ConfigKey>
+                <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+            </Connection>
+        </PushButton>
+        <!-- Sampler 5 -->
+        <PushButton>
+            <Tooltip>Play Sampler 5</Tooltip>
+            <NumberStates>1</NumberStates>
+            <LeftClickIsPushButton>true</LeftClickIsPushButton>
+            <State>
+                <Number>0</Number>
+                <Pressed>pad/hot_cue_on.png</Pressed>
+                <Unpressed>pad/hot_cue_off.png</Unpressed>
+            </State>
+           
+            <Pos>8,87</Pos>
+            <Connection>
+                <ConfigKey>[Sampler5],play</ConfigKey>
+                <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+            </Connection>
+        </PushButton>
+        <!-- Sampler 6 -->
+        <PushButton>
+            <Tooltip>Play Sampler 6</Tooltip>
+            <NumberStates>1</NumberStates>
+            <LeftClickIsPushButton>true</LeftClickIsPushButton>
+            <State>
+                <Number>0</Number>
+                <Pressed>pad/hot_cue_on.png</Pressed>
+                <Unpressed>pad/hot_cue_off.png</Unpressed>
+            </State>
+           
+            <Pos>90,87</Pos>
+            <Connection>
+                <ConfigKey>[Sampler6],play</ConfigKey>
+                <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+            </Connection>
+        </PushButton>
+        <!-- Sampler 7 -->
+        <PushButton>
+            <Tooltip>Play Sampler 7</Tooltip>
+            <NumberStates>1</NumberStates>
+            <LeftClickIsPushButton>true</LeftClickIsPushButton>
+            <State>
+                <Number>0</Number>
+                <Pressed>pad/hot_cue_on.png</Pressed>
+                <Unpressed>pad/hot_cue_off.png</Unpressed>
+            </State>
+           
+            <Pos>170,87</Pos>
+            <Connection>
+                <ConfigKey>[Sampler7],play</ConfigKey>
+                <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+            </Connection>
+        </PushButton>
+        <!-- Sampler 8 -->
+        <PushButton>
+            <Tooltip>Play Sampler 8</Tooltip>
+            <NumberStates>1</NumberStates>
+            <LeftClickIsPushButton>true</LeftClickIsPushButton>
+            <State>
+                <Number>0</Number>
+                <Pressed>pad/hot_cue_on.png</Pressed>
+                <Unpressed>pad/hot_cue_off.png</Unpressed>
+            </State>
+           
+            <Pos>252,87</Pos>
+            <Connection>
+                <ConfigKey>[Sampler8],play</ConfigKey>
+                <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+            </Connection>
+        </PushButton>
+    </Children>
+</WidgetGroup>
+</Template>

@@ -1,0 +1,802 @@
+<Template>
+
+<!--
+	**********************************************
+	LIBRARY BUTTON
+	**********************************************
+	-->	
+    <PushButton>
+        <Tooltip>Toggle Library Visibility</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+            <Pressed>buttons/lib_on.png</Pressed>
+            <Unpressed>buttons/lib_off.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>buttons/lib_off.png</Pressed>
+            <Unpressed>buttons/lib_on.png</Unpressed>
+        </State>
+        <Pos>10,480</Pos>
+        <Connection>
+            <ConfigKey>[Skin],show_library</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+<!--
+	**********************************************
+	SPLIT
+	**********************************************
+	-->	
+
+    <PushButton>
+        <Tooltip>SPLIT</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+            <Pressed>mixer/SPLIT_ON.png</Pressed>
+            <Unpressed>mixer/SPLIT_OFF.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>mixer/SPLIT_OFF.png</Pressed>
+            <Unpressed>mixer/SPLIT_ON.png</Unpressed>
+        </State>
+        <Pos>10,368</Pos>
+        <Connection>
+            <ConfigKey>[Master],headSplit</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+
+<!--
+	**********************************************
+	RECORDING
+	**********************************************
+	-->	
+
+
+<PushButton>
+  <TooltipId>recording</TooltipId>
+  <NumberStates>3</NumberStates>
+  <LeftClickIsPushButton>true</LeftClickIsPushButton>
+  <RightClickIsPushButton>true</RightClickIsPushButton>
+  <State>
+    <!-- RECORD OFF -->
+    <Number>0</Number>
+    <Pressed>buttons/RECORD_ON.png</Pressed>
+    <Unpressed>buttons/RECORD_OFF.png</Unpressed>
+  </State>
+  <State>
+    <!-- RECORD READY-->
+    <Number>1</Number>
+    <Pressed>buttons/RECORD_ON.png</Pressed>
+    <Unpressed>buttons/RECORD_ON.png</Unpressed>
+  </State>
+  <State>
+    <!-- RECORD ON-->
+    <Number>2</Number>
+    <Pressed>buttons/RECORD_ON.png</Pressed>
+    <Unpressed>buttons/RECORD_ON.png</Unpressed>
+  </State>
+  <Pos>677,152</Pos>
+  <Connection>
+    <ConfigKey>[Recording],toggle_recording</ConfigKey>
+    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+    <ButtonState>LeftButton</ButtonState>
+    <ConnectValueToWidget>false</ConnectValueToWidget>
+  </Connection>
+  <Connection>
+    <ConfigKey>[Recording],status</ConfigKey>
+    <ConnectValueFromWidget>false</ConnectValueFromWidget>
+  </Connection>
+</PushButton>
+<!--
+	**********************************************
+	BROADCAST
+	**********************************************
+	-->	
+
+<PushButton>
+  <TooltipId>BROADCAST</TooltipId>
+  <NumberStates>3</NumberStates>
+  <LeftClickIsPushButton>true</LeftClickIsPushButton>
+  <RightClickIsPushButton>true</RightClickIsPushButton>
+  <State>
+  
+    <Number>0</Number>
+    <Pressed>buttons/BROADCAST_ON.png</Pressed>
+    <Unpressed>buttons/BROADCAST_OFF.png</Unpressed>
+  </State>
+  <State>
+
+    <Number>1</Number>
+    <Pressed>buttons/BROADCAST_ON.png</Pressed>
+    <Unpressed>buttons/BROADCAST_ON.png</Unpressed>
+  </State>
+  <State>
+     <Number>2</Number>
+    <Pressed>buttons/BROADCAST_ON.png</Pressed>
+    <Unpressed>buttons/BROADCAST_ON.png</Unpressed>
+  </State>
+  <Pos>1841,368</Pos>
+  <Connection>
+    <ConfigKey>[Shoutcast],enabled</ConfigKey>
+    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+    <ButtonState>LeftButton</ButtonState>
+    <ConnectValueToWidget>false</ConnectValueToWidget>
+  </Connection>
+  <Connection>
+    <ConfigKey>[Shoutcast],status</ConfigKey>
+    <ConnectValueFromWidget>false</ConnectValueFromWidget>
+  </Connection>
+</PushButton>
+
+
+
+
+
+ <!-- QUANTIZE -->
+ <PushButton>
+        <Tooltip>quantize deck 1</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/QUANTIZE_ON.png</Pressed>
+            <Unpressed>turntable/QUANTIZE_OFF.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>turntable/QUANTIZE_OFF.png</Pressed>
+            <Unpressed>turntable/QUANTIZE_ON.png</Unpressed>
+        </State>
+        <Pos>1,272</Pos>
+        <Connection>
+             <ConfigKey>[Channel1],quantize</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+    <PushButton>
+        <Tooltip>quantize deck 2</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/QUANTIZE_ON.png</Pressed>
+            <Unpressed>turntable/QUANTIZE_OFF.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>turntable/QUANTIZE_OFF.png</Pressed>
+            <Unpressed>turntable/QUANTIZE_ON.png</Unpressed>
+        </State>
+        <Pos>1841,272</Pos>
+        <Connection>
+             <ConfigKey>[Channel2],quantize</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+
+    <!-- BMPLOCK -->
+<PushButton>
+        <Tooltip>KEYLOCK DECK1</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/BPMLOCK_ON.png</Pressed>
+            <Unpressed>turntable/BPMLOCK_OFF.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>turntable/BPMLOCK_OFF.png</Pressed>
+            <Unpressed>turntable/BPMLOCK_ON.png</Unpressed>
+        </State>
+        <Pos>36,272</Pos>
+        <Connection>
+             <ConfigKey>[Channel1],keylock</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+<PushButton>
+        <Tooltip>KEYLOCK DECK2</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/BPMLOCK_ON.png</Pressed>
+            <Unpressed>turntable/BPMLOCK_OFF.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>turntable/BPMLOCK_OFF.png</Pressed>
+            <Unpressed>turntable/BPMLOCK_ON.png</Unpressed>
+        </State>
+        <Pos>1876,272</Pos>
+        <Connection>
+             <ConfigKey>[Channel2],keylock</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+     <!-- SLIP -->
+<PushButton>
+        <Tooltip>SLIP DECK1</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/SLIP_ON.png</Pressed>
+            <Unpressed>turntable/SLIP_OFF.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>turntable/SLIP_OFF.png</Pressed>
+            <Unpressed>turntable/SLIP_ON.png</Unpressed>
+        </State>
+        <Pos>2,307</Pos>
+        <Connection>
+             <ConfigKey>[Channel1],slip_enabled</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+<PushButton>
+        <Tooltip>SLIP DECK2</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/SLIP_ON.png</Pressed>
+            <Unpressed>turntable/SLIP_OFF.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>turntable/SLIP_OFF.png</Pressed>
+            <Unpressed>turntable/SLIP_ON.png</Unpressed>
+        </State>
+        <Pos>1841,307</Pos>
+        <Connection>
+             <ConfigKey>[Channel2],slip_enabled</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+  <!-- REPEAT -->
+<PushButton>
+        <Tooltip>Repeat DECK1</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/REPEAT_ON.png</Pressed>
+            <Unpressed>turntable/REPEAT_OFF.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>turntable/REPEAT_OFF.png</Pressed>
+            <Unpressed>turntable/REPEAT_ON.png</Unpressed>
+        </State>
+        <Pos>37,307</Pos>
+        <Connection>
+             <ConfigKey>[Channel1],repeat</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+<PushButton>
+        <Tooltip>Repeat DECK2</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/REPEAT_ON.png</Pressed>
+            <Unpressed>turntable/REPEAT_OFF.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>turntable/REPEAT_OFF.png</Pressed>
+            <Unpressed>turntable/REPEAT_ON.png</Unpressed>
+        </State>
+        <Pos>1876,307</Pos>
+        <Connection>
+             <ConfigKey>[Channel2],repeat</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>  
+  
+<!-- BEATGRID_ADJUST -->
+<PushButton>
+        <Tooltip>Adgust beatgrid  DECK1</Tooltip>
+        <NumberStates>1</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/BEATGRID_ADJ_ON.png</Pressed>
+            <Unpressed>turntable/BEATGRID_ADJ_OFF.png</Unpressed>
+        </State>
+        
+        <Pos>37,236</Pos>
+        <Connection>
+             <ConfigKey>[Channel1],beats_translate_curpos</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+<PushButton>
+        <Tooltip>Adgust beatgrid DECK2</Tooltip>
+        <NumberStates>1</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/BEATGRID_ADJ_ON.png</Pressed>
+            <Unpressed>turntable/BEATGRID_ADJ_OFF.png</Unpressed>
+        </State>
+       
+        <Pos>1841,236</Pos>
+        <Connection>
+             <ConfigKey>[Channel2],beats_translate_curpos</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>  
+
+<!-- eject-->
+<PushButton>
+        <Tooltip>Eject  DECK1</Tooltip>
+        <NumberStates>1</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/EJECT_ON.png</Pressed>
+            <Unpressed>turntable/EJECT_OFF.png</Unpressed>
+        </State>
+        
+        <Pos>1,236</Pos>
+        <Connection>
+             <ConfigKey>[Channel1],eject</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+<PushButton>
+        <Tooltip>eject DECK2</Tooltip>
+        <NumberStates>1</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/EJECT_ON.png</Pressed>
+            <Unpressed>turntable/EJECT_OFF.png</Unpressed>
+        </State>
+       
+        <Pos>1876,236</Pos>
+        <Connection>
+             <ConfigKey>[Channel2],eject</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>  
+
+
+
+<!-- INTRO_START -->
+<!-- INTRO_START -->
+<PushButton>
+    <Tooltip>Deck 1 intro start</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>turntable/INTRO_START_OFF.png</Pressed>
+        <Unpressed>turntable/INTRO_START_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>turntable/INTRO_START_ON.png</Pressed>
+        <Unpressed>turntable/INTRO_START_ON.png</Unpressed>
+    </State>
+    <Pos>1,124</Pos>
+    <Connection>
+        <ConfigKey>[Channel1],intro_start_activate</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>LeftButton</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Channel1],intro_start_clear</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+        <Connection>
+        <ConfigKey>[Channel1],intro_start_enabled</ConfigKey>
+        <ConnectValueFromWidget>false</ConnectValueFromWidget>
+    </Connection>
+
+</PushButton>
+<PushButton>
+    <Tooltip>Deck 2 intro start</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>turntable/INTRO_START_ON.png</Pressed>
+        <Unpressed>turntable/INTRO_START_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>turntable/INTRO_START_OFF.png</Pressed>
+        <Unpressed>turntable/INTRO_START_ON.png</Unpressed>
+    </State>
+    <Pos>1847,124</Pos>
+    <Connection>
+        <ConfigKey>[Channel2],intro_start_activate</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>LeftButton</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Channel2],intro_start_clear</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+      <Connection>
+        <ConfigKey>[Channel2],intro_start_enabled</ConfigKey>
+        <ConnectValueFromWidget>false</ConnectValueFromWidget>
+    </Connection>
+</PushButton>
+<!-- INTRO_END -->
+<PushButton>
+    <Tooltip>Deck 1 intro end</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>turntable/INTRO_END_ON.png</Pressed>
+        <Unpressed>turntable/INTRO_END_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>turntable/INTRO_END_OFF.png</Pressed>
+        <Unpressed>turntable/INTRO_END_ON.png</Unpressed>
+    </State>
+    <Pos>36,124</Pos>
+    <Connection>
+        <ConfigKey>[Channel1],intro_end_activate</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>LeftButton</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Channel1],intro_end_clear</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+      <Connection>
+        <ConfigKey>[Channel1],intro_end_enabled</ConfigKey>
+        <ConnectValueFromWidget>false</ConnectValueFromWidget>
+    </Connection>
+</PushButton>
+<PushButton>
+    <Tooltip>Deck 2 intro end</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>turntable/INTRO_END_ON.png</Pressed>
+        <Unpressed>turntable/INTRO_END_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>turntable/INTRO_END_OFF.png</Pressed>
+        <Unpressed>turntable/INTRO_END_ON.png</Unpressed>
+    </State>
+    <Pos>1882,124</Pos>
+    <Connection>
+        <ConfigKey>[Channel2],intro_end_activate</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>LeftButton</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Channel2],intro_end_clear</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+        <Connection>
+        <ConfigKey>[Channel2],intro_end_enabled</ConfigKey>
+        <ConnectValueFromWidget>false</ConnectValueFromWidget>
+    </Connection>
+</PushButton>
+<!-- OUTRO_START -->
+<PushButton>
+    <Tooltip>Deck 1 outro start</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>turntable/OUTRO_START_ON.png</Pressed>
+        <Unpressed>turntable/OUTRO_START_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>turntable/OUTRO_START_OFF.png</Pressed>
+        <Unpressed>turntable/OUTRO_START_ON.png</Unpressed>
+    </State>
+    <Pos>1,159</Pos>
+    <Connection>
+        <ConfigKey>[Channel1],outro_start_activate</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>LeftButton</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Channel1],outro_start_clear</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+        <Connection>
+        <ConfigKey>[Channel1],outro_start_enabled</ConfigKey>
+        <ConnectValueFromWidget>false</ConnectValueFromWidget>
+    </Connection>
+</PushButton>
+<PushButton>
+    <Tooltip>Deck 2 outro start</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>turntable/OUTRO_START_ON.png</Pressed>
+        <Unpressed>turntable/OUTRO_START_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>turntable/OUTRO_START_OFF.png</Pressed>
+        <Unpressed>turntable/OUTRO_START_ON.png</Unpressed>
+    </State>
+    <Pos>1847,159</Pos>
+    <Connection>
+        <ConfigKey>[Channel2],outro_start_activate</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>LeftButton</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Channel2],outro_start_clear</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Channel2],outro_start_enabled</ConfigKey>
+        <ConnectValueFromWidget>false</ConnectValueFromWidget>
+    </Connection>
+    
+</PushButton>
+<!-- OUTRO_END -->
+<PushButton>
+    <Tooltip>Deck 1 outro end</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>turntable/OUTRO_END_ON.png</Pressed>
+        <Unpressed>turntable/OUTRO_END_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>turntable/OUTRO_END_OFF.png</Pressed>
+        <Unpressed>turntable/OUTRO_END_ON.png</Unpressed>
+    </State>
+    <Pos>36,159</Pos>
+    <Connection>
+        <ConfigKey>[Channel1],outro_end_activate</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>LeftButton</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Channel1],outro_end_clear</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Channel1],outro_end_enabled</ConfigKey>
+        <ConnectValueFromWidget>false</ConnectValueFromWidget>
+    </Connection>
+</PushButton>
+<PushButton>
+    <Tooltip>Deck 2 outro end</Tooltip>
+    <NumberStates>2</NumberStates>
+    <State>
+        <Number>0</Number>
+        <Pressed>turntable/OUTRO_END_ON.png</Pressed>
+        <Unpressed>turntable/OUTRO_END_OFF.png</Unpressed>
+    </State>
+    <State>
+        <Number>1</Number>
+        <Pressed>turntable/OUTRO_END_OFF.png</Pressed>
+        <Unpressed>turntable/OUTRO_END_ON.png</Unpressed>
+    </State>
+    <Pos>1882,159</Pos>
+    <Connection>
+        <ConfigKey>[Channel2],outro_end_activate</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>LeftButton</ButtonState>
+    </Connection>
+    <Connection>
+        <ConfigKey>[Channel2],outro_end_clear</ConfigKey>
+        <EmitOnDownPress>true</EmitOnDownPress>
+        <ButtonState>RightButton</ButtonState>
+    </Connection>
+       <Connection>
+        <ConfigKey>[Channel2],outro_end_enabled</ConfigKey>
+        <ConnectValueFromWidget>false</ConnectValueFromWidget>
+    </Connection>
+</PushButton>
+<PushButton>
+        <Tooltip>KEY RESET</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/RESET_KEY.png</Pressed>
+            <Unpressed>turntable/RESET_KEY.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>turntable/RESET_KEY.png</Pressed>
+            <Unpressed>turntable/RESET_KEY.png</Unpressed>
+        </State>
+        <Pos>21,1002</Pos>
+        <Connection>
+             <ConfigKey>[Channel1],reset_key</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+
+<PushButton>
+        <Tooltip>KEY RESET</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/RESET_KEY.png</Pressed>
+            <Unpressed>turntable/RESET_KEY.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>turntable/RESET_KEY.png</Pressed>
+            <Unpressed>turntable/RESET_KEY.png</Unpressed>
+        </State>
+        <Pos>1869,1002</Pos>
+        <Connection>
+             <ConfigKey>[Channel2],reset_key</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+
+
+<PushButton>
+        <Tooltip>pitch_up</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/PITCH_UP.png</Pressed>
+            <Unpressed>turntable/PITCH_UP.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>turntable/PITCH_UP.png</Pressed>
+            <Unpressed>turntable/PITCH_UP.png</Unpressed>
+        </State>
+        <Pos>18,966</Pos>
+        <Connection>
+             <ConfigKey>[Channel1],pitch_up</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+<PushButton>
+        <Tooltip>pitch_up</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/PITCH_UP.png</Pressed>
+            <Unpressed>turntable/PITCH_UP.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>turntable/PITCH_UP.png</Pressed>
+            <Unpressed>turntable/PITCH_UP.png</Unpressed>
+        </State>
+        <Pos>1865,966</Pos>
+        <Connection>
+             <ConfigKey>[Channel2],pitch_up</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+<PushButton>
+        <Tooltip>pitch_down</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/PITCH_DOWN.png</Pressed>
+            <Unpressed>turntable/PITCH_DOWN.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>turntable/PITCH_DOWN.png</Pressed>
+            <Unpressed>turntable/PITCH_DOWN.png</Unpressed>
+        </State>
+        <Pos>18,1032</Pos>
+        <Connection>
+             <ConfigKey>[Channel1],pitch_down</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+<PushButton>
+        <Tooltip>pitch_down</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+         <Pressed>turntable/PITCH_DOWN.png</Pressed>
+            <Unpressed>turntable/PITCH_DOWN.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>turntable/PITCH_DOWN.png</Pressed>
+            <Unpressed>turntable/PITCH_DOWN.png</Unpressed>
+        </State>
+        <Pos>1865,1032</Pos>
+        <Connection>
+             <ConfigKey>[Channel2],pitch_down</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+    </PushButton>
+  
+<PushButton>
+  <TooltipId>bpm tap</TooltipId>
+  <NumberStates>1</NumberStates>
+  <State>
+    <Number>0</Number>
+    <Pressed>turntable/BPM_TAP.png</Pressed>
+    <Unpressed>turntable/BPM_TAP.png</Unpressed>
+  </State>
+  <Pos>15,866</Pos>
+  <Connection>
+    <ConfigKey>[Channel1],bpm_tap</ConfigKey>
+    <EmitOnDownPress>true</EmitOnDownPress>
+  </Connection>
+  </PushButton>
+<PushButton>
+  <TooltipId>bpm tap</TooltipId>
+  <NumberStates>1</NumberStates>
+  <State>
+    <Number>0</Number>
+    <Pressed>turntable/BPM_TAP.png</Pressed>
+    <Unpressed>turntable/BPM_TAP.png</Unpressed>
+  </State>
+  <Pos>1865,866</Pos>
+  <Connection>
+    <ConfigKey>[Channel2],bpm_tap</ConfigKey>
+    <EmitOnDownPress>true</EmitOnDownPress>
+  </Connection>
+  </PushButton>   
+
+  <PushButton>
+  <TooltipId>reverse</TooltipId>
+  <NumberStates>1</NumberStates>
+  <State>
+    <Number>0</Number>
+    <Pressed>mixer/PREV.png</Pressed>
+    <Unpressed>mixer/PREV.png</Unpressed>
+  </State>
+  <Pos>15,925</Pos>
+  <Connection>
+    <ConfigKey>[Channel1],reverse</ConfigKey>
+  
+  </Connection>
+
+  </PushButton>
+<PushButton>
+  <TooltipId>reverse</TooltipId>
+  <NumberStates>1</NumberStates>
+  <State>
+    <Number>0</Number>
+    <Pressed>mixer/PREV.png</Pressed>
+    <Unpressed>mixer/PREV.png</Unpressed>
+  </State>
+  <Pos>1865,925</Pos>
+  <Connection>
+    <ConfigKey>[Channel2],reverse</ConfigKey>
+    
+  </Connection>
+  </PushButton>   
+
+
+
+</Template>

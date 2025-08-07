@@ -1,0 +1,333 @@
+<Children>
+<WidgetGroup>
+        <Pos>0,0</Pos>
+        <Size>1920,61</Size>
+        <Children>
+            <Visual>
+                <TooltipId>waveform_channel1</TooltipId>
+                <Channel>1</Channel>
+                <Size>1920,61</Size>
+                <BgColor>#181818</BgColor>
+                <SignalColor>#1EA3FF</SignalColor>
+                <BeatColor>#FFAA0080</BeatColor>
+                <PlayPosColor>#FF0000</PlayPosColor>
+                <Orientation>horizontal</Orientation>
+                
+                <Mark>
+                    <Control>cue_point</Control>
+                    <Text>CUE</Text>
+                    <Align>center|bottom</Align>
+                    <Color>#996600</Color>
+                    <TextColor>#FFFF00</TextColor>
+                </Mark>
+                
+                <MarkRange>
+                    <StartControl>loop_start_position</StartControl>
+                    <EndControl>loop_end_position</EndControl>
+                    <EnabledControl>loop_enabled</EnabledControl>
+                    <Color>#cccc00</Color>
+                </MarkRange>
+ <Mark>
+                    <Control>hotcue_1_position</Control>
+                    <Text>1</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#FEC8D8</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+ <Mark>
+                    <Control>hotcue_2_position</Control>
+                    <Text>2</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#FF9FF3</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+
+ <Mark>
+                    <Control>hotcue_3_position</Control>
+                    <Text>3</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#B39DDB</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+ <Mark>
+                    <Control>hotcue_4_position</Control>
+                    <Text>4</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#A9D6F2</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+ <Mark>
+                    <Control>hotcue_5_position</Control>
+                    <Text>5</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#A8D5BA</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+ <Mark>
+                    <Control>hotcue_6_position</Control>
+                    <Text>6</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#FFF3B0</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+
+ <Mark>
+                    <Control>hotcue_7_position</Control>
+                    <Text>7</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#FFD166</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+ <Mark>
+                    <Control>hotcue_8_position</Control>
+                    <Text>8</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#FF6B6B</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+
+  <!-- Loop In Marker -->
+                <Mark>
+                    <Control>loop_start_position</Control>
+                    <Text>IN</Text>
+                    <Align>bottom|left</Align>
+                    <Color>#a88c32</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+                
+                <!-- Loop Out Marker -->
+                <Mark>
+                    <Control>loop_end_position</Control>
+                    <Text>OUT</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#a88c32</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+
+<!-- Intro -->
+            <MarkRange>
+              <StartControl>intro_start_position</StartControl>
+              <EndControl>intro_end_position</EndControl>
+              
+              
+              <Opacity>0.1</Opacity>
+              <DurationTextColor>#ffffff</DurationTextColor>
+              <DurationTextLocation>after</DurationTextLocation>
+            </MarkRange>
+            <Mark>
+              <Control>intro_start_position</Control>
+              <Text>&#9698;</Text>
+              <Icon>skins:style/mark_intro.svg</Icon>
+              
+              <Align>top|right</Align>
+              
+              <TextColor>#FFFFFF</TextColor>
+            </Mark>
+            <Mark>
+              <Control>intro_end_position</Control>
+              
+              <Text>&#9698;</Text>
+              <Icon>skins:style/mark_intro.svg</Icon>
+              <Align>top|left</Align>
+              
+              <TextColor>#FFFFFF</TextColor>
+            </Mark>
+            <!-- Outro -->
+            <MarkRange>
+              <StartControl>outro_start_position</StartControl>
+              <EndControl>outro_end_position</EndControl>
+              
+              
+              <Opacity>0.1</Opacity>
+              <DurationTextColor>#ffffff</DurationTextColor>
+              <DurationTextLocation>before</DurationTextLocation>
+            </MarkRange>
+            <Mark>
+              <Control>outro_start_position</Control>
+              
+              <Text>&#9699;</Text>
+              <Icon>skins:style/mark_outro.svg</Icon>
+              <Align>top|right</Align>
+              
+              <TextColor>#FFFFFF</TextColor>
+            </Mark>
+            <Mark>
+              <Control>outro_end_position</Control>
+              <Text>&#9699;</Text>
+              <Icon>skins:style/mark_outro.svg</Icon>
+              
+              <Align>top|left</Align>
+              
+              <TextColor>#FFFFFF</TextColor>
+            </Mark>
+
+            </Visual>
+        </Children>
+    </WidgetGroup>
+
+    <WidgetGroup>
+        <Pos>0,61</Pos>
+        <Size>1920,61</Size>
+        <Children>
+            <Visual>
+                <TooltipId>waveform_channel2</TooltipId>
+                <Channel>2</Channel>
+                <Size>1920,61</Size>
+                <BgColor>#181818</BgColor>
+                <SignalColor>#FF00DD</SignalColor>
+                <BeatColor>#FFAA0080</BeatColor>
+                <PlayPosColor>#00FFFF</PlayPosColor>
+                <Orientation>horizontal</Orientation>
+                
+                          <Mark>
+                    <Control>cue_point</Control>
+                    <Text>CUE</Text>
+                    <Align>center|bottom</Align>
+                    <Color>#996600</Color>
+                    <TextColor>#FFFF00</TextColor>
+                </Mark>
+                
+                <MarkRange>
+                    <StartControl>loop_start_position</StartControl>
+                    <EndControl>loop_end_position</EndControl>
+                    <EnabledControl>loop_enabled</EnabledControl>
+                    <Color>#cccc00</Color>
+                </MarkRange>
+ <Mark>
+                    <Control>hotcue_1_position</Control>
+                    <Text>1</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#FEC8D8</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+ <Mark>
+                    <Control>hotcue_2_position</Control>
+                    <Text>2</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#FF9FF3</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+
+ <Mark>
+                    <Control>hotcue_3_position</Control>
+                    <Text>3</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#B39DDB</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+ <Mark>
+                    <Control>hotcue_4_position</Control>
+                    <Text>4</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#A9D6F2</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+ <Mark>
+                    <Control>hotcue_5_position</Control>
+                    <Text>5</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#A8D5BA</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+ <Mark>
+                    <Control>hotcue_6_position</Control>
+                    <Text>6</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#FFF3B0</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+
+ <Mark>
+                    <Control>hotcue_7_position</Control>
+                    <Text>7</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#FFD166</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+ <Mark>
+                    <Control>hotcue_8_position</Control>
+                    <Text>8</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#FF6B6B</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+
+  <!-- Loop In Marker -->
+                <Mark>
+                    <Control>loop_start_position</Control>
+                    <Text>IN</Text>
+                    <Align>bottom|left</Align>
+                    <Color>#a88c32</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+                
+                <!-- Loop Out Marker -->
+                <Mark>
+                    <Control>loop_end_position</Control>
+                    <Text>OUT</Text>
+                    <Align>bottom|right</Align>
+                    <Color>#a88c32</Color>
+                    <TextColor>#FFFFFF</TextColor>
+                </Mark>
+
+<!-- Intro -->
+            <MarkRange>
+              <StartControl>intro_start_position</StartControl>
+              <EndControl>intro_end_position</EndControl>
+              
+              
+              <Opacity>0.1</Opacity>
+              <DurationTextColor>#ffffff</DurationTextColor>
+              <DurationTextLocation>after</DurationTextLocation>
+            </MarkRange>
+            <Mark>
+              <Control>intro_start_position</Control>
+              <Text>&#9698;</Text>
+              <Icon>skins:style/mark_intro.svg</Icon>
+              
+              <Align>top|right</Align>
+              
+              <TextColor>#FFFFFF</TextColor>
+            </Mark>
+            <Mark>
+              <Control>intro_end_position</Control>
+              
+              <Text>&#9698;</Text>
+              <Icon>skins:style/mark_intro.svg</Icon>
+              <Align>top|left</Align>
+              
+              <TextColor>#FFFFFF</TextColor>
+            </Mark>
+            <!-- Outro -->
+            <MarkRange>
+              <StartControl>outro_start_position</StartControl>
+              <EndControl>outro_end_position</EndControl>
+              
+              
+              <Opacity>0.1</Opacity>
+              <DurationTextColor>#ffffff</DurationTextColor>
+              <DurationTextLocation>before</DurationTextLocation>
+            </MarkRange>
+            <Mark>
+              <Control>outro_start_position</Control>
+              
+              <Text>&#9699;</Text>
+              <Icon>skins:style/mark_outro.svg</Icon>
+              <Align>top|right</Align>
+              
+              <TextColor>#FFFFFF</TextColor>
+            </Mark>
+            <Mark>
+              <Control>outro_end_position</Control>
+              <Text>&#9699;</Text>
+              <Icon>skins:style/mark_outro.svg</Icon>
+              
+              <Align>top|left</Align>
+              
+              <TextColor>#FFFFFF</TextColor>
+            </Mark>
+            </Visual>
+            
+        </Children>
+    </WidgetGroup>
+</Children>
