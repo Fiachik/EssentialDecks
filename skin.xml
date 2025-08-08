@@ -294,6 +294,23 @@
 		</Connection>
 	</KnobComposed>
 
+
+    <PushButton>
+	    <Tooltip>Microphone talkover&#10;Hold-to-talk and mix microphone input into the master output.&#10;</Tooltip>
+	    <NumberStates>1</NumberStates>
+	    <State>
+		<Number>0</Number>
+		<Pressed>mixer/TALK_ON.png</Pressed>
+		<Unpressed>mixer/TALK_OFF.png</Unpressed>
+	    </State>
+	    <Pos>1876,368</Pos>
+	    <Connection>
+		<ConfigKey>[Microphone],talkover</ConfigKey>
+		<EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+		<ButtonState>LeftButton</ButtonState>
+	    </Connection>
+	</PushButton>
+
 	<!--	
 	
 	
