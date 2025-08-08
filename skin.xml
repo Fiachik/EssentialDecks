@@ -282,7 +282,7 @@
 	
 	<KnobComposed>
 		<Tooltip>Adjusts the microphone volume.&#10;Right-click: Reset to default value&#10;</Tooltip>
-		<Size>46f,46f</Size>
+		<Size>43f,43f</Size>
 		<Knob>mixer/knob_grey.png</Knob>
 		<BackPath>mixer/knob_grey.png</BackPath>
 		<MinAngle>0</MinAngle>
@@ -330,26 +330,26 @@
 	
 	<KnobComposed>
 		<Tooltip>Headphone volume control</Tooltip>
-		<Size>60f,60f</Size>
+		<Size>43f,43f</Size>
 		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
 		<BackPath>mixer/knob_grey.png</BackPath>
 		<MinAngle>5</MinAngle>
 		<MaxAngle>310</MaxAngle>
 		<KnobCenterYOffset>0</KnobCenterYOffset>
-		<Pos>718,780</Pos>
+		<Pos>725,787</Pos>
 		<Connection>
 			<ConfigKey>[Master],headVolume</ConfigKey>
 		</Connection>
 	</KnobComposed>	
 	<KnobComposed>
 		<Tooltip>Headphone mix control</Tooltip>
-		<Size>60f,60f</Size>
+		<Size>43f,43f</Size>
 		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
 		<BackPath>mixer/knob_grey.png</BackPath>
 		<MinAngle>5</MinAngle>
 		<MaxAngle>310</MaxAngle>
 		<KnobCenterYOffset>0</KnobCenterYOffset>
-		<Pos>718,685</Pos>
+		<Pos>725,691</Pos>
 		<Connection>
 			<ConfigKey>[Master],headMix</ConfigKey>
 		</Connection>
@@ -376,39 +376,39 @@
 	</KnobComposed>
 	<KnobComposed>
 		<Tooltip>Treble filter control</Tooltip>
-		<Size>60f,60f</Size>
+		<Size>43f,43f</Size>
 		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
 		<BackPath>mixer/knob_grey.png</BackPath>
 		<MinAngle>0</MinAngle>
 		<MaxAngle>305</MaxAngle>
 		<KnobCenterYOffset>0</KnobCenterYOffset>
-		<Pos>853,302</Pos>
+		<Pos>861,311</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],filterHigh</ConfigKey>
 		</Connection>
 	</KnobComposed>
 	<KnobComposed>
 		<Tooltip>Mid filter control</Tooltip>
-		<Size>60f,60f</Size>
+		<Size>43f,43f</Size>
 		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
 		<BackPath>mixer/knob_grey.png</BackPath>
 		<MinAngle>0</MinAngle>
 		<MaxAngle>305</MaxAngle>
 		<KnobCenterYOffset>0</KnobCenterYOffset>
-		<Pos>853,392</Pos>
+		<Pos>861,400</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],filterMid</ConfigKey>
 		</Connection>
 	</KnobComposed>
 	<KnobComposed>
 		<Tooltip>Bass filter control</Tooltip>
-		<Size>60f,60f</Size>
+		<Size>43f,43f</Size>
 		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
 		<BackPath>mixer/knob_grey.png</BackPath>
 		<MinAngle>0</MinAngle>
 		<MaxAngle>305</MaxAngle>
 		<KnobCenterYOffset>0</KnobCenterYOffset>
-		<Pos>853,483</Pos>
+		<Pos>861,489</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],filterLow</ConfigKey>
 		</Connection>
@@ -432,39 +432,39 @@
 	</KnobComposed>
 	<KnobComposed>
 		<Tooltip>Treble filter control</Tooltip>
-		<Size>60f,60f</Size>
+		<Size>43f,43f</Size>
 		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
 		<BackPath>mixer/knob_grey.png</BackPath>
 		<MinAngle>0</MinAngle>
 		<MaxAngle>305</MaxAngle>
 		<KnobCenterYOffset>0</KnobCenterYOffset>
-		<Pos>999,302</Pos>
+		<Pos>1008,311</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],filterHigh</ConfigKey>
 		</Connection>
 	</KnobComposed>
 	<KnobComposed>
 		<Tooltip>Mid filter control</Tooltip>
-		<Size>60f,60f</Size>
+		<Size>43f,43f</Size>
 		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
 		<BackPath>mixer/knob_grey.png</BackPath>
 		<MinAngle>0</MinAngle>
 		<MaxAngle>305</MaxAngle>
 		<KnobCenterYOffset>0</KnobCenterYOffset>
-		<Pos>999,392</Pos>
+		<Pos>1008,400</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],filterMid</ConfigKey>
 		</Connection>
 	</KnobComposed>
 	<KnobComposed>
 		<Tooltip>Bass filter control</Tooltip>
-		<Size>60f,60f</Size>
+		<Size>43f,43f</Size>
 		<Knob>mixer/knob_grey<Variable name="color"/>.png</Knob>
 		<BackPath>mixer/knob_grey.png</BackPath>
 		<MinAngle>0</MinAngle>
 		<MaxAngle>305</MaxAngle>
 		<KnobCenterYOffset>0</KnobCenterYOffset>
-		<Pos>999,482</Pos>
+		<Pos>1008,489</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],filterLow</ConfigKey>
 		</Connection>
