@@ -696,7 +696,133 @@
 </PushButton>
 
 
+<!--					
+	**********************************************
+	Button- Frequency Kill
+	**********************************************
+	-->
+	<PushButton>
+		<Tooltip>Temporary high kill</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>mixer/kill_pr.png</Pressed>
+			<Unpressed>mixer/EQ_KILL_OFF.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>mixer/EQ_KILL_OFF.png</Pressed>
+			<Unpressed>mixer/HI_EQ_KILL_ON.png</Unpressed>
+		</State>
+		<Pos>818,326</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],filterHighKill</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Temporary high kill</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>mixer/HI_EQ_KILL_ON.png</Pressed>
+			<Unpressed>mixer/EQ_KILL_OFF.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>mixer/EQ_KILL_OFF.png</Pressed>
+			<Unpressed>mixer/HI_EQ_KILL_ON.png</Unpressed>
+		</State>
+		<Pos>1069,326</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],filterHighKill</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
 
+	<PushButton>
+		<Tooltip>Temporary Mid kill</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>mixer/MID_EQ_KILL_ON.png</Pressed>
+			<Unpressed>mixer/EQ_KILL_OFF.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>mixer/EQ_KILL_OFF.png</Pressed>
+			<Unpressed>mixer/MID_EQ_KILL_ON.png</Unpressed>
+		</State>
+		<Pos>818,416</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],filterMidKill</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Temporary Mid kill</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>mixer/MID_EQ_KILL_ON.png</Pressed>
+			<Unpressed>mixer/EQ_KILL_OFF.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>mixer/EQ_KILL_OFF.png</Pressed>
+			<Unpressed>mixer/MID_EQ_KILL_ON.png</Unpressed>
+		</State>
+		<Pos>1069,416</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],filterMidKill</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+
+	<PushButton>
+		<Tooltip>Temporary bass kill</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>mixer/LOW_EQ_KILL_ON.png</Pressed>
+			<Unpressed>mixer/EQ_KILL_OFF.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>mixer/EQ_KILL_OFF.png</Pressed>
+			<Unpressed>mixer/LOW_EQ_KILL_ON.png</Unpressed>
+		</State>
+		<Pos>818,506</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],filterLowKill</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Temporary bass kill</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>mixer/LOW_EQ_KILL_ON.png</Pressed>
+			<Unpressed>mixer/EQ_KILL_OFF.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>mixer/EQ_KILL_OFF.png</Pressed>
+			<Unpressed>mixer/LOW_EQ_KILL_ON.png</Unpressed>
+		</State>
+		<Pos>1069,506</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],filterLowKill</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
 
 
 
@@ -706,9 +832,14 @@
 	SYNC
 	**********************************************
 	-->
+
+
 <PushButton>
   <TooltipId>sync_enabled</TooltipId>
+  <ObjectName>SyncDeck</ObjectName>
+  <Size>40f,22f</Size>
   <NumberStates>2</NumberStates>
+  <RightClickIsPushButton>true</RightClickIsPushButton>
   <State>
     <Number>0</Number>
     <Pressed>turntable/beat_sync_pr.png</Pressed>
@@ -726,14 +857,20 @@
     <ConnectValueToWidget>true</ConnectValueToWidget>
   </Connection>
   <Connection>
-    <ConfigKey>[Channel1],beatsync</ConfigKey>
+    <ConfigKey>[Channel1],rateRange</ConfigKey>
     <ButtonState>RightButton</ButtonState>
+    <Transform>
+      <Select>0.01755,0.02757,0.05765,0.24813</Select>
+    </Transform>
   </Connection>
 </PushButton>
 
 <PushButton>
   <TooltipId>sync_enabled</TooltipId>
+  <ObjectName>SyncDeck</ObjectName>
+  <Size>40f,22f</Size>
   <NumberStates>2</NumberStates>
+  <RightClickIsPushButton>true</RightClickIsPushButton>
   <State>
     <Number>0</Number>
     <Pressed>turntable/beat_sync_pr.png</Pressed>
@@ -751,10 +888,15 @@
     <ConnectValueToWidget>true</ConnectValueToWidget>
   </Connection>
   <Connection>
-    <ConfigKey>[Channel2],beatsync</ConfigKey>
+    <ConfigKey>[Channel2],rateRange</ConfigKey>
     <ButtonState>RightButton</ButtonState>
+    <Transform>
+      <Select>0.01755,0.02757,0.05765,0.24813</Select>
+    </Transform>
   </Connection>
 </PushButton>
+
+
 
 <Template src="skin:overview_section.xml"/>
 
@@ -1078,9 +1220,10 @@ VU METERS
     <EmitOnDownPress>false</EmitOnDownPress>
   </Connection>
 </SliderComposed>
+
 <WidgetGroup>
         <ObjectName>LibraryWrapper</ObjectName>
-        <Pos>72,311</Pos>
+        <Pos>79,183</Pos>
         <SizePolicy>f,f</SizePolicy>
         <Layout>vertical</Layout>
 
