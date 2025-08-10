@@ -25,6 +25,28 @@
             <ButtonState>LeftButton</ButtonState>
         </Connection>
     </PushButton>
+
+  <PushButton>
+        <Tooltip>Toggle Big Library Visibility</Tooltip>
+        <NumberStates>2</NumberStates>
+        <State>
+            <Number>0</Number>
+            <Pressed>mixer/big_library_on.png</Pressed>
+            <Unpressed>mixer/big_library_on.png</Unpressed>
+        </State>
+        <State>
+            <Number>1</Number>
+            <Pressed>mixer/big_library_off.png</Pressed>
+            <Unpressed>mixer/big_library_on.png</Unpressed>
+        </State>
+        <Pos>937,134</Pos>
+        <Connection>
+            <ConfigKey>[Skin],show_library_big</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+
+    </PushButton>
 <!--
 	**********************************************
 	SPLIT
