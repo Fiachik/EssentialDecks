@@ -11,7 +11,7 @@
         <attribute persist="true" config_key="[Skin],pad_mode_2">0</attribute>
             <attribute persist="true" config_key="[Skin],pad_mode">0</attribute>
             <attribute persist="true" config_key="[Skin],show_library">0</attribute>
-<attribute persist="true" config_key="[Skin],show_library_big">0</attribute>
+
         </attributes>
     </manifest>
  <Style src="skin:style.qss"/>
@@ -24,18 +24,6 @@
         <Style>QGroupBox { background: url(skin:/Background.png); }</Style>
     </WidgetGroup>
     
- <!-- CROSSFADER -->
-    <SliderComposed>
-  <TooltipId>crossfader</TooltipId>
-<Handle>mixer/slider_h.png</Handle>
-        <Slider>mixer/xfader_bg.png</Slider>
-        <Pos>869,975</Pos>
-  <Horizontal>true</Horizontal>
-  <Connection>
-    <ConfigKey>[Master],crossfader</ConfigKey>
-    <EmitOnDownPress>false</EmitOnDownPress>
-  </Connection>
-</SliderComposed>
 
 <SetVariable name="[Skin],pad_mode">0</SetVariable>
 <!--
@@ -1269,59 +1257,19 @@ VU METERS
 </SliderComposed>
 
 <WidgetGroup>
-        <ObjectName>LibraryWrapper</ObjectName>
-        <Pos>79,183</Pos>
-        <SizePolicy>f,f</SizePolicy>
-        <Layout>vertical</Layout>
-
-        <Connection>
-            <ConfigKey>[Skin],show_library</ConfigKey>
-            <BindProperty>visible</BindProperty>
-        </Connection>
-        <Children>
-            <WidgetGroup>
-                <ObjectName>LibraryContainer</ObjectName>
-                <Size>1767f,577f</Size>
-                <Layout>horizontal</Layout>
-                <Children>
-                    <Splitter>
-                        <Size>me,me</Size>
-                        <SplitSizes>1,6</SplitSizes>
-                        <Collapsible>1,0</Collapsible>
-                        <SplitSizesConfigKey>[Skin],librarySidebar_splitsize</SplitSizesConfigKey>
-                        <Children>
-                            <WidgetGroup>
-                                <SizePolicy>i,min</SizePolicy>
-                                <Layout>vertical</Layout>
-                                <Children>
-                                    <SearchBox></SearchBox>
-                                    <WidgetGroup><Size>,5f</Size></WidgetGroup>
-                                    <LibrarySidebar></LibrarySidebar>
-                                </Children>
-                            </WidgetGroup>
-                            <Library>
-                                <ShowButtonText>false</ShowButtonText>
-                                <TrackTableBackgroundColorOpacity>0.250</TrackTableBackgroundColorOpacity>
-                            </Library>
-                        </Children>
-                    </Splitter>
-                </Children>
-            </WidgetGroup>
-        </Children>
-    </WidgetGroup>
-<WidgetGroup>
-        <ObjectName>LibraryWrapper</ObjectName>
+        <ObjectName>LibraryWrapper_big</ObjectName>
         <Pos>1,186</Pos>
         <SizePolicy>f,f</SizePolicy>
         <Layout>vertical</Layout>
 
-        <Connection>
-            <ConfigKey>[Skin],show_library_big</ConfigKey>
-            <BindProperty>visible</BindProperty>
-        </Connection>
+     <Connection>
+        <ConfigKey>[Skin],show_library_big</ConfigKey>
+        <BindProperty>visible</BindProperty>
+        <Transform><Set>0</Set></Transform> 
+    </Connection>
         <Children>
             <WidgetGroup>
-                <ObjectName>LibraryContainer</ObjectName>
+                <ObjectName>LibraryContainer_big</ObjectName>
                 <Size>1919f,894f</Size>
                 <Layout>horizontal</Layout>
                 <Children>
@@ -1350,4 +1298,47 @@ VU METERS
             </WidgetGroup>
         </Children>
     </WidgetGroup>
+
+<WidgetGroup>
+        <ObjectName>LibraryWrapper</ObjectName>
+        <Pos>73,200</Pos>
+        <SizePolicy>f,f</SizePolicy>
+        <Layout>vertical</Layout>
+
+        <Connection>
+            <ConfigKey>[Skin],show_library</ConfigKey>
+            <BindProperty>visible</BindProperty>
+        </Connection>
+        <Children>
+            <WidgetGroup>
+                <ObjectName>LibraryContainer</ObjectName>
+                <Size>1767f,667f</Size>
+                <Layout>horizontal</Layout>
+                <Children>
+                    <Splitter>
+                        <Size>me,me</Size>
+                        <SplitSizes>1,6</SplitSizes>
+                        <Collapsible>1,0</Collapsible>
+                        <SplitSizesConfigKey>[Skin],librarySidebar_splitsize</SplitSizesConfigKey>
+                        <Children>
+                            <WidgetGroup>
+                                <SizePolicy>i,min</SizePolicy>
+                                <Layout>vertical</Layout>
+                                <Children>
+                                    <SearchBox></SearchBox>
+                                    <WidgetGroup><Size>,5f</Size></WidgetGroup>
+                                    <LibrarySidebar></LibrarySidebar>
+                                </Children>
+                            </WidgetGroup>
+                            <Library>
+                                <ShowButtonText>false</ShowButtonText>
+                                <TrackTableBackgroundColorOpacity>0.250</TrackTableBackgroundColorOpacity>
+                            </Library>
+                        </Children>
+                    </Splitter>
+                </Children>
+            </WidgetGroup>
+        </Children>
+    </WidgetGroup>
+
 </skin>
